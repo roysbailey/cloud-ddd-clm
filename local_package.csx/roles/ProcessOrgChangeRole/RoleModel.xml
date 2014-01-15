@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RoleModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProcessOrgChangeRole" version="2.2.6492.2" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <Startup>
+    <Task commandLine="setup_worker.cmd &gt; log.txt" executionContext="elevated" relativePath="approot\">
+      <Environment>
+        <Variable name="EMULATED">
+          <RoleInstanceValue xpath="/RoleEnvironment/Deployment/@emulated" />
+        </Variable>
+        <Variable name="RUNTIMEID" value="node" />
+        <Variable name="RUNTIMEURL" value="http://az413943.vo.msecnd.net/node/0.6.20.exe" />
+      </Environment>
+    </Task>
+    <Task commandLine="node.cmd .\startup.js" executionContext="elevated" relativePath="approot\">
+      <Environment />
+    </Task>
+  </Startup>
+  <Runtime protocolVersion="2011-03-08">
+    <Environment>
+      <Variable name="PORT">
+        <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/Endpoints/Endpoint[@name='HttpIn']/@port" />
+      </Variable>
+      <Variable name="EMULATED">
+        <RoleInstanceValue xpath="/RoleEnvironment/Deployment/@emulated" />
+      </Variable>
+    </Environment>
+    <EntryPoint>
+      <ProgramEntryPoint commandLine="node.cmd .\server.js" setReadyOnProcessStart="true" />
+    </EntryPoint>
+  </Runtime>
+  <Properties>
+    <Property name="TargetFrameworkVersion" value="v4.0" />
+    <Property name="TargetRuntimeVersion" value="v4.0" />
+  </Properties>
+</RoleModel>
