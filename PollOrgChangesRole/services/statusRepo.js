@@ -20,7 +20,7 @@ exports.getLatestImportDetails = function(callback){
                         callback(null, orgImportRunDetails);
                     } else if (err.statusCode === 404) {
                         orgImportRunDetails = createBlankorgImportRunDetails();
-                        setLatestImportDetails(orgImportRunDetails, function(err){
+                        updateLatestImportDetails(orgImportRunDetails, function(err){
                             callback(err, orgImportRunDetails);
                         });
                     } else {
@@ -31,9 +31,15 @@ exports.getLatestImportDetails = function(callback){
             callback(err);
         }
     });
+};
+
+exports.putLatestImportDetails = function(latestProcessedEventDate, callback){
+    var lastImportDetails = createBlankorgImportRunDetails();
+    lastImportDetails.lastImportedItemUpdateDate = latestProcessedEventDate;
+    updateLatestImportDetails(lastImportDetails, callback);
 }
 
-function setLatestImportDetails(lastImportDetails, callback){
+function updateLatestImportDetails(lastImportDetails, callback){
     tableService.createTableIfNotExists(orgImportRunDetailsTableName, function(err){
         if(!err){
             tableService.insertOrMergeEntity(orgImportRunDetailsTableName, lastImportDetails, function(err, data){
@@ -44,7 +50,6 @@ function setLatestImportDetails(lastImportDetails, callback){
         }
     });
 }
-
 
 function createBlankorgImportRunDetails(){
     var orgImportRunDetails = {

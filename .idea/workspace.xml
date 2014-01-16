@@ -23,19 +23,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="4" selection-start="425" selection-end="425" vertical-scroll-proportion="0.5558583" vertical-offset="0" max-vertical-offset="527">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eventQueueRepo.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/eventQueueRepo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="2" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+              <folding>
+                <marker date="1389882259373" expanded="true" signature="221:719" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eventSourceRepo.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="45" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.4715447" vertical-offset="489" max-vertical-offset="1377">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="1" selection-start="323" selection-end="323" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="323">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="statusRepo.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/statusRepo.js">
+        <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="42" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1054">
+            <state line="51" column="1" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
               <folding />
             </state>
           </provider>
@@ -44,7 +73,7 @@
       <file leaf-file-name="serviceclient.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/azure/lib/services/core/serviceclient.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="144" column="0" selection-start="5139" selection-end="5139" vertical-scroll-proportion="0.0" vertical-offset="2092" max-vertical-offset="14161">
+            <state line="144" column="0" selection-start="5139" selection-end="5139" vertical-scroll-proportion="0.0" vertical-offset="2448" max-vertical-offset="14399">
               <folding />
             </state>
           </provider>
@@ -62,7 +91,7 @@
       <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="680">
+            <state line="30" column="0" selection-start="952" selection-end="1031" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="680">
               <folding />
             </state>
           </provider>
@@ -79,8 +108,13 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/ProcessOrgChangeRole/server.js" />
-        <option value="$PROJECT_DIR$/PollOrgChangesRole/server.js" />
         <option value="$PROJECT_DIR$/PollOrgChangesRole/statusRepo.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/PollOrgChangesRole/package.json" />
+        <option value="$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js" />
+        <option value="$PROJECT_DIR$/PollOrgChangesRole/server.js" />
+        <option value="$PROJECT_DIR$/PollOrgChangesRole/services/eventQueueRepo.js" />
+        <option value="$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js" />
       </list>
     </option>
   </component>
@@ -116,6 +150,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -130,7 +165,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cloud-ddd-cml" />
+              <option name="myItemId" value="cloud-ddd-clm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -140,7 +175,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cloud-ddd-cml" />
+              <option name="myItemId" value="cloud-ddd-clm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -154,7 +189,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cloud-ddd-cml" />
+              <option name="myItemId" value="cloud-ddd-clm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -162,9 +197,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloud-ddd-cml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloud-ddd-clm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PollOrgChangesRole" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -178,7 +230,21 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\data\git\cloud-ddd-clm\PollOrgChangesRole\services" />
+      <recent name="C:\data\git\cloud-ddd-clm\PollOrgChangesRole" />
+    </key>
+  </component>
   <component name="RunManager" selected="Node.js.PollOrgChangesRole">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -189,23 +255,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -248,22 +306,22 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24809742" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16728625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39878234" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824427" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -293,19 +351,109 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/PollOrgChangesRole/server.js</url>
-          <line>8</line>
-          <option name="timeStamp" value="24" />
+          <line>22</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/PollOrgChangesRole/statusRepo.js</url>
-          <line>36</line>
-          <option name="timeStamp" value="38" />
+          <url>file://$PROJECT_DIR$/PollOrgChangesRole/server.js</url>
+          <line>37</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/PollOrgChangesRole/server.js</url>
+          <line>45</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/PollOrgChangesRole/server.js</url>
+          <line>49</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/PollOrgChangesRole/server.js</url>
+          <line>54</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/PollOrgChangesRole/server.js</url>
+          <line>59</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/PollOrgChangesRole/server.js</url>
+          <line>75</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/PollOrgChangesRole/server.js</url>
+          <line>78</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/PollOrgChangesRole/server.js</url>
+          <line>90</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js</url>
+          <line>20</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js</url>
+          <line>71</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js</url>
+          <line>68</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js</url>
+          <line>33</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="39" />
+      <option name="time" value="56" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="4" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="42" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/azure/lib/services/core/serviceclient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="0" selection-start="5139" selection-end="5139" vertical-scroll-proportion="0.0" vertical-offset="2448" max-vertical-offset="14399">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/azure/node_modules/request/request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="394" column="0" selection-start="11625" selection-end="11625" vertical-scroll-proportion="0.0" vertical-offset="6563" max-vertical-offset="21080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="340">
@@ -342,13 +490,6 @@
         <state line="397" column="27" selection-start="11722" selection-end="11722" vertical-scroll-proportion="1.101695" vertical-offset="6359" max-vertical-offset="21080" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/azure/node_modules/request/request.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="394" column="0" selection-start="11625" selection-end="11625" vertical-scroll-proportion="0.0" vertical-offset="6563" max-vertical-offset="21080">
@@ -379,9 +520,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/azure/lib/util/validate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="417" column="8" selection-start="15323" selection-end="15323" vertical-scroll-proportion="0.33333334" vertical-offset="6971" max-vertical-offset="8313">
-          <folding />
-        </state>
+        <state line="417" column="8" selection-start="15323" selection-end="15323" vertical-scroll-proportion="0.33333334" vertical-offset="6971" max-vertical-offset="8313" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/lib/services/table/tableservice.js">
@@ -391,16 +530,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/statusRepo.js">
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="42" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1054">
+        <state line="13" column="1" selection-start="323" selection-end="323" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="952" selection-end="1031" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="1" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/eventQueueRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="2" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+          <folding>
+            <marker date="1389882259373" expanded="true" signature="221:719" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/node-rest-client/lib/node-rest-client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="8" selection-start="194" selection-end="194" vertical-scroll-proportion="0.38202247" vertical-offset="0" max-vertical-offset="7990">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="425" selection-end="425" vertical-scroll-proportion="0.5558583" vertical-offset="0" max-vertical-offset="527">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="45" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.4715447" vertical-offset="489" max-vertical-offset="1377">
           <folding />
         </state>
       </provider>
