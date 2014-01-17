@@ -9,21 +9,28 @@ run();
 
 function run(){
 
+    var currentPollNumber;
     var latestProcessedEventDate;
+    var lastProcessedEventDateFromPrevPoll;
     var eventsProcessedInPoll;
 
     start();
 
     function start(){
         eventsProcessedInPoll = 0;
+        currentPollNumber = currentPollNumber ? currentPollNumber+1 : 0;
+        log('start', 'Started new poll:');
         statusRepo.getLatestImportDetails(function(err, orgImportRunDetails){
             if (!err){
-                latestProcessedEventDate = orgImportRunDetails.lastImportedItemUpdateDate ? orgImportRunDetails.lastImportedItemUpdateDate : '2000-01-01 00:00:00';
-                eventSourceRepo.findFeedContainingUpdate(orgImportRunDetails.lastImportedItemUpdateDate, function(err, feedObject){
+                lastProcessedEventDateFromPrevPoll = orgImportRunDetails.lastImportedItemUpdateDate ? orgImportRunDetails.lastImportedItemUpdateDate : '2000-01-01 00:00:00';
+                latestProcessedEventDate = lastProcessedEventDateFromPrevPoll;
+                log('start', 'Last processed event date: ' + latestProcessedEventDate);
+                eventSourceRepo.findFeedContainingUpdate(latestProcessedEventDate, function(err, feedObject){
                     if (!err){
-                        onFeedAvailableToProcess(feedObject, orgImportRunDetails.lastImportedItemUpdateDate);
+                        log('start', 'Loaded feedID: ' + feedObject.id + ' to process');
+                        onFeedAvailableToProcess(feedObject);
                     } else if (err.statusCode == 404) {
-                        console.log('Now new updates.  Last update processed: ' + orgImportRunDetails.lastImportedItemUpdateDate);
+                        log('start', 'No new events since last poll');
                     } else {
                         handleError(err);
                     }
@@ -34,33 +41,45 @@ function run(){
         });
     }
 
-    function onFeedAvailableToProcess(feedObj, lastImportedItemUpdateDate){
+    function onFeedAvailableToProcess(feedObj){
+        var lastImportedItemUpdateDate = lastProcessedEventDateFromPrevPoll;
+
         var eventsToProcess = feedObj.entries.filter(function(event){
             return event.createdDate > lastImportedItemUpdateDate;
         });
 
         var eventsToProcessCount = eventsToProcess.length;
         eventsProcessedInPoll += eventsToProcessCount;
-        eventsToProcess.forEach(function(eventToProcess){
-            latestProcessedEventDate = eventToProcess.createdDate > latestProcessedEventDate ? eventToProcess.createdDate : latestProcessedEventDate;
-            eventQueueRepo.addEvent(eventToProcess, onProcessedEvent);
-        })
+        log('onFeedAvailableToProcess', 'Feed: ' + feedObj.id + ' contains ' + feedObj.entries.length + ' event and of these ' + eventsToProcessCount + ' are new');
+        if (eventsToProcessCount !== 0){
+            eventsToProcess.forEach(function(eventToProcess){
+                latestProcessedEventDate = eventToProcess.createdDate > latestProcessedEventDate ? eventToProcess.createdDate : latestProcessedEventDate;
+                log('onFeedAvailableToProcess', 'Adding event to queue: ' + eventToProcess.id);
+                eventQueueRepo.addEvent(eventToProcess, onProcessedEvent);
+            });
+        } else {
+            // No events to process here, so must be done!
+            done();
+        }
+
 
         function onProcessedEvent(err, event){
+            log('onProcessedEvent', 'Following event is now queued: ' + event.id);
             eventsToProcessCount--;
             if (eventsToProcessCount === 0) eventFeedProcessed();
         }
 
         function eventFeedProcessed(){
+            log('eventFeedProcessed', 'Completed processing feed: ' + feedObj.id);
             feedProcessed(feedObj);
         }
     }
 
     function feedProcessed(feedObj){
-        if (feedObj.links.nextArchive){
-            eventSourceRepo.getFeedFromURI(feedObj.links.nextArchive, function(err, feedObject){
+        if (feedObj._links.nextArchive){
+            eventSourceRepo.getFeedFromURI(feedObj._links.nextArchive.href, function(err, feedObject){
                 if (!err){
-                    callback(null, feedObject);
+                    onFeedAvailableToProcess(feedObject);
                 } else {
                     handleError(err);
                 }
@@ -73,12 +92,12 @@ function run(){
     }
 
     function done(){
-        console.log('Queued [%02d] events, latest event is: ' + latestProcessedEventDate, eventsProcessedInPoll);
+        log('eventFeedProcessed', 'Queued '+ eventsProcessedInPoll + ' events, latest event is: ' + latestProcessedEventDate);
 
         statusRepo.putLatestImportDetails(latestProcessedEventDate, function(err){
             if (err) handleError(err)
 
-            console.log('Poll completed:: Updated last run details, and about to sleep until next poll: %02d', pollIntervalMS);
+            log('Poll completed: Updated last run details, and about to sleep until next poll: ' + pollIntervalMS);
 
             // All completed, so lets sleep and run again at next poll interval
             setTimeout(
@@ -89,6 +108,10 @@ function run(){
 
     function handleError(err){
         console.log('Poll failed with error: ' + err);
+    }
+
+    function log(context, msg){
+        console.log('[ES][%s][poll:%02d] - %s',context, currentPollNumber, msg);
     }
 }
 

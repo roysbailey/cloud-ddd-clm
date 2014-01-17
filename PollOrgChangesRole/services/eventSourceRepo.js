@@ -35,7 +35,7 @@ exports.findFeedContainingUpdate = function(lastImportedItemUpdateDate, callback
             callback(null, feedObj);
         } else {
             if (feedObj._links.previousArchive) {
-                processFeed(hostName + feedObj._links.previousArchive.href);
+                processFeed(getFQDNLink(hostName, feedObj._links.previousArchive.href));
             } else {
                 // Did not find the created date in ANY feed :-(
                 callback({ statusCode: 404 }, feedObj);
@@ -46,8 +46,8 @@ exports.findFeedContainingUpdate = function(lastImportedItemUpdateDate, callback
     function findFirstFeed(url) {
         getFeedFromURI(url, function(err, feedObj) {
            if (!err) {
-               if (feedObj.links.previousArchive) {
-                   findFirstFeed(feedObj.links.previousArchive);
+               if (feedObj._links.previousArchive) {
+                   findFirstFeed(getFQDNLink(hostName, feedObj._links.previousArchive.href));
                } else {
                    callback(null, feedObj);
                }
@@ -56,15 +56,19 @@ exports.findFeedContainingUpdate = function(lastImportedItemUpdateDate, callback
            }
         });
     }
-};
+}
 
 exports.getFeedFromURI = function(feedURI, callback){
     getFeedFromURI(feedURI, callback);
 };
 
 
-
 function getFeedFromURI(feedURI, callback){
+
+    // If given a relative URI, make it absolute.
+    if (feedURI.indexOf(":") == -1)
+        feedURI = getFQDNLink(hostName, feedURI);
+
     restClient.get(feedURI, function(data, response){
         var feedObj = JSON.parse(data);
         callback(null, feedObj);
@@ -73,3 +77,7 @@ function getFeedFromURI(feedURI, callback){
             callback(err);
         });
 }
+
+function getFQDNLink(hostName, relativeHref){
+    return hostName + relativeHref;
+};
