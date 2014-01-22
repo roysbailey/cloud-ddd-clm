@@ -58,8 +58,8 @@ function run(){
                 eventQueueRepo.addEvent(eventToProcess, onProcessedEvent);
             });
         } else {
-            // No events to process here, so must be done!
-            done();
+            // No events to process here, but we may have other later feeds to process, so signal this feed as processed and it will check!
+            eventFeedProcessed();
         }
 
 
@@ -111,7 +111,7 @@ function run(){
     }
 
     function log(context, msg){
-        console.log('[ES][%s][poll:%02d] - %s',context, currentPollNumber, msg);
+        console.log('[ESPoll][%s][poll:%d] - %s',context, currentPollNumber, msg);
     }
 }
 
