@@ -1,73 +1,81 @@
-var azure = require('azure');
-
-var queueService = azure.createQueueService();
-var eventQueueName = "orgeventsqueue";
+var eventQueueRepo = require('./../services/eventQueueRepo');
+var config = require('../config').config;
+var Logger = require('../services/logger').Logger;
+var logger = new Logger('pollForChanges');
 
 // Start polling new messages on our queue
 pollForChanges();
 
 function pollForChanges() {
 
-    start();
+    var eventsToProcessCount;
+    var eventsProcessedCount;
 
-    function start(){
-        log("start", "Org event processor starting");
-        queueService.getMessages(eventQueueName, {numofmessages: 1}, function(err, messages){
-            if(!err){
-                if (messages.length) {
-                    log("ProcessEvent", "Messages to process: " + messages.length);
-                    // Process the message in less than 30 seconds, the message
-                    // We get a "collection" of messages at a time
-                    messages.forEach(function(message){
-                        var event = JSON.parse(message.messagetext);
-                        processEvent(event);
-    //                    queueService.deleteMessage(queueName
-    //                        , message.messageid
-    //                        , message.popreceipt
-    //                        , function(error){
-    //                            if(!error){
-    //                                console.log("Message removed from queue");
-    //                            }
-    //                        });
-                    });
+    pollQueue();
+
+    function pollQueue(){
+        logger.log("pollQueue", "Org event processor starting");
+
+        eventQueueRepo.loadEvents(function(err, events){
+            if (!err) {
+                logger.log("pollQueue", "Loaded messages.  Number to process is: " + events.length);
+                processAllEvents(events);
+            } else {
+                if (err.statusCode === 404) {
+                    logger.log("loadEvents", "No messages to process: ");
+                } else {
+                    logger.logErr("Failed to load events to process: " + err);
                 }
 
-                // Check again in another 2 seconds.
-                setTimeout(
-                    pollForChanges,
-                    2000);
-            } else {
-                handleError(err);
+                processedAllEvents();
             }
         });
     }
 
-    function processEvent(event){
-        log("ProcessEvent", event.id);
-        var eventTypes = event.category.filter(function(category){
-            return category.scheme === 'event';
-        });
+    function processAllEvents(events) {
+        eventsProcessedCount = 0;
+        eventsToProcessCount = events.length;
 
-        var eventTypeTerm;
-        eventTypes.forEach(function(eventType){
-            eventTypeTerm = eventType.term;
-        });
-        log('ProcessEvent', event.id + ' - EventType: ' + eventTypeTerm);
+        var moreEvents = true;
+        while(moreEvents) {
+            getNextEvent(function(err, event){
+                if (!err) {
+                    processEvent(event);
+                } else {
+                    moreEvents = false;
+                }
+            });
+        }
 
-        if (eventTypeTerm === 'update') {
-            log("ProcessEvent", "Need to perform UPDATE for event: " + event.id);
-        } else if (eventTypeTerm === 'delete') {
-            log("ProcessEvent", "Need to perform DELETE for event: " + event.id);
-        } else {
-            handleError("Unknown eventType: " + eventTypeTerm + ' when processing event: ' + event.id);
+        processedAllEvents();
+
+        function getNextEvent(callback) {
+            if (eventsProcessedCount >= eventsToProcessCount) {
+                callback({ statusCode: 404 })
+            } else {
+                callback(null, events[eventsProcessedCount++]);
+            }
         }
     }
 
-    function handleError(err){
-        log("ERROR", 'Poll failed with error: ' + err);
+    function processedAllEvents() {
+        logger.log("processedAllEvents", "Sleeping for following interval: " + config.pollQueuePollInterval);
+        setTimeout(
+            pollQueue,
+            config.pollQueuePollInterval);
     }
 
-    function log(context, msg){
-        console.log('[ESProc][%s] - %s',context, msg);
+    function processEvent(wrappedEvent){
+        var event = wrappedEvent.event;
+        var eventType = wrappedEvent.eventType;
+        logger.log("ProcessEvent", 'Start processing event: ' + eventType + ' for eventID: ' + event.id);
+
+        if (eventType === 'update') {
+            logger.log("ProcessEvent", "Need to perform UPDATE for event: " + event.id);
+        } else if (eventType === 'delete') {
+            logger.log("ProcessEvent", "Need to perform DELETE for event: " + event.id);
+        } else {
+            logger.logErr("Unknown eventType: " + eventTypeTerm + ' when processing event: ' + event.id);
+        }
     }
 }

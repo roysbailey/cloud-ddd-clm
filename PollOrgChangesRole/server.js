@@ -1,6 +1,6 @@
 var statusRepo = require('./services/statusRepo');
 var eventSourceRepo = require('./services/eventSourceRepo');
-var eventQueueRepo = require('./services/eventQueueRepo');
+var eventQueueRepo = require('./../services/eventQueueRepo');
 
 var pollIntervalMS = 10000;
 
