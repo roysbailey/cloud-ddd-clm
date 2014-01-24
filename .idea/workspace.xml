@@ -23,31 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="azure.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/azure/lib/azure.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="570" column="59" selection-start="27031" selection-end="27031" vertical-scroll-proportion="0.0" vertical-offset="9324" max-vertical-offset="10132">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="proxyfilter.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/azure/lib/services/core/filters/proxyfilter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="66" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="1717">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="logger.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/logger.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <folding>
-                <element signature="n#!!doc;n#Logger#0" expanded="false" />
-              </folding>
+            <state line="17" column="0" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="425">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,20 +41,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="node-rest-client.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/node-rest-client/lib/node-rest-client.js">
+      <file leaf-file-name="orgCacheRepo.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/services/orgCacheRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="58" selection-start="1553" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="7990">
-              <folding />
+            <state line="12" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="850">
+              <folding>
+                <element signature="e#0#38#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="statusRepo.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js">
+      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="1139">
-              <folding />
+            <state line="9" column="22" selection-start="178" selection-end="196" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+              <folding>
+                <marker date="1390550386942" expanded="true" signature="61:253" placeholder="{&quot;orgEventsQueueName&quot;: &quot;orgeventsqueue&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,22 +81,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="23" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
+            <state line="40" column="0" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.40899795" vertical-offset="480" max-vertical-offset="1717">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config.js">
+      <file leaf-file-name="orgEventContentToOrgCache.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/services/orgEventContentToOrgCache.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="2" selection-start="174" selection-end="174" vertical-scroll-proportion="0.2670157" vertical-offset="0" max-vertical-offset="382">
+            <state line="4" column="8" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
               <folding>
-                <element signature="e#0#42#0" expanded="false" />
+                <element signature="e#0#38#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="112" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="2091">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,16 +129,19 @@
         <option value="$PROJECT_DIR$/PollOrgChangesRole/server.js" />
         <option value="$PROJECT_DIR$/services/logger.js" />
         <option value="$PROJECT_DIR$/services/eventQueueRepo.js" />
-        <option value="$PROJECT_DIR$/ProcessOrgChangeRole/server.js" />
         <option value="$PROJECT_DIR$/config.js" />
+        <option value="$PROJECT_DIR$/ProcessOrgChangeRole/services/orgToOrgCache.js" />
+        <option value="$PROJECT_DIR$/ProcessOrgChangeRole/services/orgEventContentToOrgCache.js" />
+        <option value="$PROJECT_DIR$/ProcessOrgChangeRole/services/orgCacheRepo.js" />
+        <option value="$PROJECT_DIR$/ProcessOrgChangeRole/server.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="width" value="1616" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -173,6 +169,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -201,13 +198,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ProcessOrgChangeRole" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloud-ddd-cml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloud-ddd-clm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProcessOrgChangeRole" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloud-ddd-cml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloud-ddd-clm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="PollOrgChangesRole" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloud-ddd-cml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloud-ddd-clm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PollOrgChangesRole" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -295,18 +341,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24809742" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19702603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34703195" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.112096265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3464467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824427" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32741117" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -335,7 +381,7 @@
       <breakpoints>
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js</url>
-          <line>19</line>
+          <line>21</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint type="javascript">
@@ -360,29 +406,27 @@
         </line-breakpoint>
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js</url>
-          <line>42</line>
-          <option name="timeStamp" value="92" />
+          <line>75</line>
+          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js</url>
-          <line>52</line>
-          <option name="timeStamp" value="93" />
+          <line>84</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js</url>
+          <line>77</line>
+          <option name="timeStamp" value="100" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="96" />
+      <option name="time" value="104" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="19" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1513">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/node-rest-client/lib/node-rest-client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="58" selection-start="1553" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="7990">
@@ -420,16 +464,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="2858" selection-end="2858" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="1700">
-          <folding />
-        </state>
+        <state line="78" column="0" selection-start="2858" selection-end="2858" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="1700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/azure/lib/services/queue/queueservice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="291" column="11" selection-start="13992" selection-end="13992" vertical-scroll-proportion="0.0" vertical-offset="4947" max-vertical-offset="12818">
-          <folding />
-        </state>
+        <state line="291" column="11" selection-start="13992" selection-end="13992" vertical-scroll-proportion="0.0" vertical-offset="4947" max-vertical-offset="12818" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/eventQueueRepo.js">
@@ -441,9 +481,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="33" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1377">
-          <folding />
-        </state>
+        <state line="45" column="33" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1377" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/node-rest-client/lib/node-rest-client.js">
@@ -483,9 +521,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/eventQueueRepo.js">
@@ -497,9 +533,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="45" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="1377">
-          <folding />
-        </state>
+        <state line="39" column="45" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="1377" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js">
@@ -532,9 +566,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="527">
-          <folding />
-        </state>
+        <state line="12" column="4" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="527" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js">
@@ -567,9 +599,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="340">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
@@ -582,11 +612,6 @@
     <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/node_modules/azure/lib/services/queue/queueservice.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="268" column="22" selection-start="12695" selection-end="12695" vertical-scroll-proportion="0.5254237" vertical-offset="4132" max-vertical-offset="12580" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/node_modules/azure/lib/services/core/serviceclient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="695" column="2" selection-start="26096" selection-end="26096" vertical-scroll-proportion="0.57344633" vertical-offset="11374" max-vertical-offset="14161" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/node_modules/azure/lib/util/validate.js">
@@ -628,13 +653,6 @@
         <state line="422" column="23" selection-start="19537" selection-end="19537" vertical-scroll-proportion="0.33333334" vertical-offset="6818" max-vertical-offset="15283" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="174" max-vertical-offset="1139">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/node-rest-client/lib/node-rest-client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="58" selection-start="1553" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="7990">
@@ -644,58 +662,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="19" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1513">
-          <folding />
-        </state>
+        <state line="53" column="19" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1513" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/azure/lib/services/queue/queueservice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="538" column="71" selection-start="26682" selection-end="26699" vertical-scroll-proportion="0.0" vertical-offset="8831" max-vertical-offset="12580">
-          <folding />
-        </state>
+        <state line="538" column="71" selection-start="26682" selection-end="26699" vertical-scroll-proportion="0.0" vertical-offset="8831" max-vertical-offset="12580" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/lib/util/constants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2575" column="35" selection-start="43578" selection-end="43591" vertical-scroll-proportion="0.0" vertical-offset="43647" max-vertical-offset="48450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="112" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2091">
-          <folding />
-        </state>
+        <state line="2575" column="35" selection-start="43578" selection-end="43591" vertical-scroll-proportion="0.0" vertical-offset="43647" max-vertical-offset="48450" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="7" selection-start="854" selection-end="854" vertical-scroll-proportion="0.3316583" vertical-offset="752" max-vertical-offset="3247">
-          <folding />
-        </state>
+        <state line="52" column="7" selection-start="854" selection-end="854" vertical-scroll-proportion="0.3316583" vertical-offset="752" max-vertical-offset="3247" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/logger.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <folding>
-            <element signature="n#!!doc;n#Logger#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/azure/lib/azure.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="570" column="59" selection-start="27031" selection-end="27031" vertical-scroll-proportion="0.0" vertical-offset="9324" max-vertical-offset="10132">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/azure/lib/services/core/filters/proxyfilter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="66" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="1717">
           <folding />
         </state>
       </provider>
@@ -707,19 +694,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
+    <entry file="file://$PROJECT_DIR$/Windows Azure Cloud Essentials-1-14-2014-credentials.publishsettings">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="23" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="749">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="112" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="2091">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="2" selection-start="174" selection-end="174" vertical-scroll-proportion="0.2670157" vertical-offset="0" max-vertical-offset="382">
+        <state line="9" column="22" selection-start="178" selection-end="196" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
           <folding>
-            <element signature="e#0#42#0" expanded="false" />
+            <marker date="1390550386942" expanded="true" signature="61:253" placeholder="{&quot;orgEventsQueueName&quot;: &quot;orgeventsqueue&quot;...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="0" selection-start="2005" selection-end="2105" vertical-scroll-proportion="0.0" vertical-offset="582" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/node_modules/azure/lib/services/core/serviceclient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="195" column="9" selection-start="8119" selection-end="8119" vertical-scroll-proportion="0.034764826" vertical-offset="3060" max-vertical-offset="14161">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/services/orgEventContentToOrgCache.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="8" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/services/orgCacheRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="850">
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.40899795" vertical-offset="480" max-vertical-offset="1717">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,4 +1,6 @@
 var eventQueueRepo = require('./../services/eventQueueRepo');
+var orgCacheRepo = require('./services/orgCacheRepo');
+var orgEventToCacheMapper = require('./services/orgEventContentToOrgCache');
 var config = require('../config').config;
 var Logger = require('../services/logger').Logger;
 var logger = new Logger('pollForChanges');
@@ -68,14 +70,27 @@ function pollForChanges() {
     function processEvent(wrappedEvent){
         var event = wrappedEvent.event;
         var eventType = wrappedEvent.eventType;
-        logger.log("ProcessEvent", 'Start processing event: ' + eventType + ' for eventID: ' + event.id);
+        logger.log("ProcessEvent", 'About to apply [' + eventType + '] for eventID: ' + event.id);
 
         if (eventType === 'update') {
-            logger.log("ProcessEvent", "Need to perform UPDATE for event: " + event.id);
+            var orgCacheItem = orgEventToCacheMapper.map(event);
+            orgCacheRepo.upsertOrg(orgCacheItem, function(err){
+                if (!err) {
+                    logger.log("ProcessEvent", "Update applied for: " + event.id);
+                } else {
+                    logger.logErr("Failed to [update] Event:" + event.id + " - Error: " + err);
+                }
+            });
         } else if (eventType === 'delete') {
-            logger.log("ProcessEvent", "Need to perform DELETE for event: " + event.id);
+            orgCacheRepo.deleteOrgFromCache(event.content.ukprn, function(err){
+                if (!err) {
+                    logger.log("ProcessEvent", "[delete] applied for: " + event.id);
+                } else {
+                    logger.logErr("Failed to [delete] Event:" + event.id + " - Error: " + err);
+                }
+            });
         } else {
-            logger.logErr("Unknown eventType: " + eventTypeTerm + ' when processing event: ' + event.id);
+            logger.logErr("Unknown eventType: " + eventType + ' when processing event: ' + event.id);
         }
     }
 }
