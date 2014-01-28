@@ -49,7 +49,8 @@ exports.loadEvents = function(callback) {
 
                     var wrappedEvent = {
                         eventType: eventTypeTerm,
-                        event: event
+                        event: event,
+                        queueEventMessage: eventMessage
                     };
 
                     jsonEventMessages.push(wrappedEvent);
@@ -64,5 +65,11 @@ exports.loadEvents = function(callback) {
             logger.logErr("Failed to load events from queue: " + err);
             callback(err, null);
         }
+    });
+};
+
+exports.dequeueEventFromQueue = function(wrappedEvent, callback) {
+    queueService.deleteMessage(config.orgEventsQueueName, wrappedEvent.queueEventMessage.messageid, wrappedEvent.queueEventMessage.popreceipt, function(err){
+        callback(err, wrappedEvent);
     });
 };

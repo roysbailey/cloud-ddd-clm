@@ -12,6 +12,7 @@ function pollForChanges() {
 
     var eventsToProcessCount;
     var eventsProcessedCount;
+    var eventsToProcess;
 
     pollQueue();
 
@@ -24,39 +25,72 @@ function pollForChanges() {
                 processAllEvents(events);
             } else {
                 if (err.statusCode === 404) {
-                    logger.log("loadEvents", "No messages to process: ");
+                    logger.log("loadEvents", "No messages to process");
+                    processedAllEvents();
                 } else {
                     logger.logErr("Failed to load events to process: " + err);
+                    processedAllEvents();
                 }
-
-                processedAllEvents();
             }
         });
     }
 
     function processAllEvents(events) {
+        // Initialise globals back to "starting processing" state.
         eventsProcessedCount = 0;
+        eventsToProcess = events;
         eventsToProcessCount = events.length;
 
-        var moreEvents = true;
-        while(moreEvents) {
-            getNextEvent(function(err, event){
-                if (!err) {
-                    processEvent(event);
-                } else {
-                    moreEvents = false;
-                }
-            });
+        onProcessNextEvent(null);
+    }
+
+    function onProcessNextEvent(err, event) {
+        if (err) {
+            logger.logErr("Failed to process event: " + event.id + " - Error: " + err);
         }
 
-        processedAllEvents();
+        var event = getNextEvent();
+        if (event) {
+            processEvent(event, onProcessNextEvent);
+        } else {
+            processedAllEvents();
+        }
+    }
 
-        function getNextEvent(callback) {
-            if (eventsProcessedCount >= eventsToProcessCount) {
-                callback({ statusCode: 404 })
-            } else {
-                callback(null, events[eventsProcessedCount++]);
-            }
+    function processEvent(wrappedEvent, callback){
+        var event = wrappedEvent.event;
+        var eventType = wrappedEvent.eventType;
+        logger.log("ProcessEvent", 'About to apply [' + eventType + '] for eventID: ' + event.id);
+
+        if (eventType === 'update') {
+            var orgCacheItem = orgEventToCacheMapper.map(event);
+            orgCacheRepo.upsertOrg(orgCacheItem, function(err){
+                if (!err) {
+                    logger.log("ProcessEvent", "Update applied for: " + event.id);
+                    eventQueueRepo.dequeueEventFromQueue(wrappedEvent, function(err){
+                        callback(err, wrappedEvent);
+                    });
+                } else {
+                    logger.logErr("Failed to [update] Event:" + event.id + " - Error: " + err);
+                    callback(err, wrappedEvent);
+                }
+            });
+        } else if (eventType === 'delete') {
+            orgCacheRepo.deleteOrgFromCache(event.content.ukprn, function(err){
+                if (!err) {
+                    logger.log("ProcessEvent", "[delete] applied for: " + event.id);
+                    eventQueueRepo.dequeueEventFromQueue(wrappedEvent, function(){
+                        callback(err, wrappedEvent);
+                    });
+                } else {
+                    logger.logErr("Failed to [delete] Event:" + event.id + " - Error: " + err);
+                    callback(err, wrappedEvent);
+                }
+            });
+        } else {
+            var err = "Unknown eventType: " + eventType + ' when processing event: ' + event.id;
+            logger.logErr(err);
+            callback(err, wrappedEvent);
         }
     }
 
@@ -67,30 +101,11 @@ function pollForChanges() {
             config.pollQueuePollInterval);
     }
 
-    function processEvent(wrappedEvent){
-        var event = wrappedEvent.event;
-        var eventType = wrappedEvent.eventType;
-        logger.log("ProcessEvent", 'About to apply [' + eventType + '] for eventID: ' + event.id);
-
-        if (eventType === 'update') {
-            var orgCacheItem = orgEventToCacheMapper.map(event);
-            orgCacheRepo.upsertOrg(orgCacheItem, function(err){
-                if (!err) {
-                    logger.log("ProcessEvent", "Update applied for: " + event.id);
-                } else {
-                    logger.logErr("Failed to [update] Event:" + event.id + " - Error: " + err);
-                }
-            });
-        } else if (eventType === 'delete') {
-            orgCacheRepo.deleteOrgFromCache(event.content.ukprn, function(err){
-                if (!err) {
-                    logger.log("ProcessEvent", "[delete] applied for: " + event.id);
-                } else {
-                    logger.logErr("Failed to [delete] Event:" + event.id + " - Error: " + err);
-                }
-            });
+    function getNextEvent() {
+        if (eventsProcessedCount >= eventsToProcessCount) {
+            return undefined;
         } else {
-            logger.logErr("Unknown eventType: " + eventType + ' when processing event: ' + event.id);
+            return eventsToProcess[eventsProcessedCount++];
         }
     }
 }
