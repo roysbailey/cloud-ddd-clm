@@ -1,0 +1,13 @@
+{
+    "name": "CLMUI",
+    "version": "0.0.1",
+    "description": "Contract Management Lifecycle UI Sample",
+    "main": "server.js",
+    "author": {
+    "name": "Roy",
+    "email": "roysbailey@silvertouch.co.uk"
+},
+    "dependencies": {
+    "express":"x"
+    }
+}

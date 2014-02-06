@@ -10,4 +10,14 @@
     <Instances count="1" />
     <Certificates />
   </Role>
+  <Role name="CLMUI">
+    <ConfigurationSettings />
+    <Instances count="1" />
+    <Certificates />
+  </Role>
+  <Role name="CLMUI">
+    <ConfigurationSettings />
+    <Instances count="1" />
+    <Certificates />
+  </Role>
 </ServiceConfiguration>

@@ -1,14 +1,14 @@
 {
-    "name": "CLMPollOrgChangesRole",
-    "version": "0.0.1",
-    "description": "Contract Management Lifecycle Sample",
-    "main": "server.js",
-    "author": {
-        "name": "Roy",
-        "email": "roysbailey@silvertouch.co.uk"
-    },
-    "dependencies": {
-        "node-rest-client":"x",
-        "azure": "x"
-    }
+"name": "CLMPollOrgChangesRole",
+"version": "0.0.1",
+"description": "Contract Management Lifecycle Sample",
+"main": "server.js",
+"author": {
+"name": "Roy",
+"email": "roysbailey@silvertouch.co.uk"
+},
+"dependencies": {
+"node-rest-client":"x",
+"azure": "x"
+}
 }
