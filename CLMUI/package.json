@@ -8,6 +8,7 @@
     "email": "roysbailey@silvertouch.co.uk"
 },
     "dependencies": {
-    "express":"x"
+        "express":"x",
+        "jade":"x"
     }
 }
