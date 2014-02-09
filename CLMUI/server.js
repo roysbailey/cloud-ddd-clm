@@ -14,5 +14,6 @@ app.configure(function () {
 });
 
 app.get('/', home.index);
+app.get('/provider-search', home.providerSearch);
 
 app.listen(port);
