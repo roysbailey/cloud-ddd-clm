@@ -4,33 +4,29 @@
 extends ../layout
 
 block content
-    .container
-        h1 Welcome to the CLM Portal!
-        p.lead
-            | Please use the form below to select a provider to work on.
+    .container-fluid
+        .row
+            .col-sm-3.col-md-2.sidebar
+                ul.nav.nav-sidebar
+                    li
+                        a(href='/provider') Manage Contracts
+                    li
+                        a(href='/provider') My Tasks
+                    li
+                        a(href='/provider') Reports
+                    li
+                        a(href='/provider') Support
 
-        .well
-            form.form-inline(role="form", action="/provider-search", method="GET")
-                .form-group
-                    label.control-label(for="search") Search Providers:
-                    input.form-control#searchText(placeholder='Enter Search')
-                button.btn.btn-success(type="submit") Search
+        .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+                h1.page-header Welcome to the CLM Dashboard!
+                .row
+                    .col-xs-6.col-sm-3
+                        img(src="http://lorempixel.com/200/200/nature/1/")
+                    .col-xs-6.col-sm-3
+                        img(src="http://lorempixel.com/200/200/nature/2/")
+                    .col-xs-6.col-sm-3
+                        img(src="http://lorempixel.com/200/200/nature/3/")
+                    .col-xs-6.col-sm-3
+                        img(src="http://lorempixel.com/200/200/nature/4/")
 
-        if fromSearch
-            if providers
-                p.lead
-                    | The following providers matched your search of [#{searchText}].
-                table.table.table-striped
-                    tr
-                        th UKPRN
-                        th Name
-                        th City
-                    each provider in providers
-                        tr
-                            td
-                                a(href='/contract/index/#{provider.ukprn}') #{provider.ukprn}
-                            td #{provider.name}
-                            td #{provider.city}
-            else
-                p.lead
-                    | Sorry, no providers matched your search of [#{searchText}].
+                hr

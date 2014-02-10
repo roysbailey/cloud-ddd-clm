@@ -1,6 +1,7 @@
 var express = require('express'),
     path = require('path'),
-    home = require('./routes/home.js'),
+    home = require('./routes/home'),
+    provider = require('./routes/provider'),
     port = process.env.port || 1337;
 
 var app = express();
@@ -14,6 +15,7 @@ app.configure(function () {
 });
 
 app.get('/', home.index);
-app.get('/provider-search', home.providerSearch);
+app.get('/provider', provider.index);
+app.get('/provider/search', provider.providerSearch);
 
 app.listen(port);
