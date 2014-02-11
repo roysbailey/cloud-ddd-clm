@@ -20,11 +20,19 @@ exports.providerContracts = function(req, res){
 }
 
 exports.contractCreate = function(req, res) {
-    res.send("Display create contract");
+    var ukprnNum = parseInt(req.params.ukprn);
+    var emptyContract = new contractRepo.Contract(ukprnNum);
+    emptyContract.ukprn = ukprnNum;
+    res.render('contract/contractEdit', { mode: "create", contract: emptyContract });
 }
 
-exports.contractDetail = function(req, res) {
-    res.send("Display contract details");
+exports.contractEdit = function(req, res) {
+    var contract = contractRepo.getContract(req.params.contractNo, function(err, contract){
+        res.render('contract/contractEdit', { mode: "update", contract: contract});
+        return;
+    });
+
+    res.redirect('/');
 }
 
 

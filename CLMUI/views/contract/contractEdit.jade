@@ -1,0 +1,13 @@
+//
+   Created by rbailey on 07/02/14.
+extends ../layout
+block content
+    .container
+        if mode == "create"
+            h1 Welcome to CREATE contract for provider: #{contract.ukprn}
+            p.lead
+                | Please enter details of your new contract below.
+        else
+            h1 Welcome to EDIT contract for provider: #{contract.ukprn}
+            p.lead
+                | Please update details of your contract below.
