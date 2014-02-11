@@ -13,3 +13,9 @@ exports.providerSearch = function(req, res){
         res.render('provider/index', { providers: data, fromSearch: true, searchText: req.query.searchText });
     });
 }
+
+exports.providerContracts = function(req, res){
+    providerRepo.searchProviders(req.query.searchText, function(err, data) {
+        res.render('provider/index', { providers: data, fromSearch: true, searchText: req.query.searchText });
+    });
+}

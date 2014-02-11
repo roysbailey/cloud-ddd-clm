@@ -17,3 +17,13 @@ exports.searchProviders = function(searchText, callback) {
 
     callback(null, selectedProviders);
 };
+
+exports.getProvider = function(ukprn, callback) {
+    var provider = providerList.filter(function(item){
+        return item.ukprn === ukprn;
+    });
+
+    provider = provider.length == 1 ? provider[0] : undefined;
+
+    callback(null, provider);
+};
