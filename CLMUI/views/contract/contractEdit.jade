@@ -3,7 +3,8 @@
 extends ../layout
 block content
     .container
-        if mode == "create"
+        h1 Hello!  #{IsCreate}
+        if IsCreate
             h1 Welcome to CREATE contract for provider: #{contract.ukprn}
             p.lead
                 | Please enter details of your new contract below.
@@ -11,3 +12,29 @@ block content
             h1 Welcome to EDIT contract for provider: #{contract.ukprn}
             p.lead
                 | Please update details of your contract below.
+
+        .well
+            form(role="form", action="/contract/#{contract.ukprn}/save", method="POST")
+                .form-group
+                    label.control-label(for="contractNo") Contract number:
+                    input.form-control#contractNo(placeholder='Enter contract number', name="contractNo", value="#{contract.contractNo}", readonly=!IsCreate )
+                .form-group
+                    label.control-label(for="startDate") Start Date:
+                    input.form-control#startDate(placeholder='e.g. 01/08/2014', name="startDate", value="#{contract.startDate}")
+                .form-group
+                    label.control-label(for="endDate") End Date:
+                    input.form-control#endDate(placeholder='e.g. 31/07/2015', name="endDate", value="#{contract.endDate}")
+                .form-group
+                    label.control-label(for="FSPCode") Funding Stream:
+                    input.form-control#FSPCode(placeholder='Select FSP', name="FSPCode", value="#{contract.FSPCode}")
+                .form-group
+                    label.control-label(for="orgUnitName") Org Unit:
+                    input.form-control#orgUnitName(placeholder='Org unit for contract', name="orgUnitName", value="#{contract.orgUnitName}")
+                .form-group
+                    label.control-label(for="contractValue") Total Value:
+                    input.form-control#contractValue(placeholder='e.g 20000.00', name="contractValue", value="#{contract.contractValue}")
+
+                .well
+                    .form-group
+                        button.btn.btn-success(type="submit") Save
+                        button.btn.btn-danger(type="submit") Cancel

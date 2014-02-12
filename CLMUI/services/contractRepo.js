@@ -16,7 +16,43 @@ exports.getProviderContracts = function(ukprn, callback) {
     callback(null, selectedContracts);
 };
 
-exports.Contract = function(ukprn) {
+exports.Contract = Contract;
+
+exports.getContract = getContract;
+
+exports.saveContract = function(ukprn, contractNo, startDate, endDate, FSPCode, orgUnitName, contractValue, callback) {
+    getContract(contractNo, function(err, contract){
+        var isCreating = !contract;
+        if (isCreating) {
+            contract = new Contract(ukprn);
+            contract.contractNo = contractNo;
+        }
+        contract.endDate = endDate;
+        contract.FSPCode = FSPCode
+        contract.startDate = startDate;
+        contract.orgUnitName = endDate;
+        contract.contractValue = contractValue;
+
+        if (isCreating) {
+            contractList.push(contract);
+        }
+
+        callback(null, contract);
+    });
+}
+
+
+function getContract(contractNo, callback){
+    var selectedContract = contractList.filter(function(item){
+        return item.contractNo === contractNo;
+    });
+
+    selectedContract = selectedContract.length == 1 ? selectedContract[0] : undefined;
+
+    callback(null, selectedContract);
+}
+
+function Contract(ukprn) {
     this.ukprn = ukprn;
     this.contractNo = "";
     this.startDate = "";
@@ -25,12 +61,3 @@ exports.Contract = function(ukprn) {
     this.orgUnitName = "";
     this.contractValue = 0.0;
 }
-
-exports.getContract = function(contractNo, callback){
-    var selectedContract = contractList.filter(function(item){
-        return item.contractNo === contractNo;
-    });
-
-    selectedContract = selectedContract.length == 1 ? selectedContract[0] : undefined;
-
-    callback(null, selectedContract);}

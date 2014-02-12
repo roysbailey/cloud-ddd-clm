@@ -20,6 +20,7 @@ app.get('/provider', provider.index);
 app.get('/provider/search', provider.providerSearch);
 app.get('/contract/:ukprn', contract.providerContracts);
 app.get('/contract/:ukprn/create', contract.contractCreate);
+app.post('/contract/:ukprn/save', contract.contractSave);
 app.get('/contract/:ukprn/:contractNo/edit', contract.contractEdit);
 
 app.listen(port);
