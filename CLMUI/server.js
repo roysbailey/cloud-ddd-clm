@@ -19,6 +19,7 @@ app.get('/', home.index);
 app.get('/provider', provider.index);
 app.get('/provider/search', provider.providerSearch);
 app.get('/contract/:ukprn', contract.providerContracts);
+app.post('/contract/:ukprn', contract.contractCreatePost);
 app.get('/contract/:ukprn/create', contract.contractCreate);
 app.get('/contract/:ukprn/:contractNo/edit', contract.contractEdit);
 

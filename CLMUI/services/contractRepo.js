@@ -33,4 +33,21 @@ exports.getContract = function(contractNo, callback){
 
     selectedContract = selectedContract.length == 1 ? selectedContract[0] : undefined;
 
-    callback(null, selectedContract);}
+    callback(null, selectedContract);
+}
+
+exports.saveContract = function(modifiedContract, callback){
+    var selectedContract = contractList.filter(function(item){
+        return item.contractNo === modifiedContract.contractNo;
+    });
+
+    if (selectedContract.length == 1) {
+        var index = contractList.indexOf(selectedContract[0]);
+        contractList[index] = modifiedContract;
+    } else {
+        contractList.push(modifiedContract);
+    }
+
+
+    callback(null, selectedContract);
+}
