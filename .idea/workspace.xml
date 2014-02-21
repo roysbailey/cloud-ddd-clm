@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e509d0cd-d738-4e15-8c19-9c72793beb72" name="Default" comment="" />
+    <list default="true" id="e509d0cd-d738-4e15-8c19-9c72793beb72" name="Default" comment="Merge branch 'master' of https://github.com/roysbailey/cloud-ddd-clm&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;CLMUI/routes/contract.js&#10;&#9;CLMUI/services/contractRepo.js&#10;&#9;CLMUI/views/contract/contractEdit.jade&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLMUI/server.js" afterPath="$PROJECT_DIR$/CLMUI/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    </list>
     <ignored path="cloud-ddd-cml.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +29,7 @@
       <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLMUI/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="43" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+            <state line="10" column="43" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="544">
               <folding />
             </state>
           </provider>
@@ -53,7 +56,7 @@
       <file leaf-file-name="contract.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CLMUI/routes/contract.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.4530831" vertical-offset="308" max-vertical-offset="1054">
+            <state line="38" column="0" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.492126" vertical-offset="271" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
@@ -71,7 +74,7 @@
       <file leaf-file-name="contractEdit.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLMUI/views/contract/contractEdit.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="23" selection-start="543" selection-end="543" vertical-scroll-proportion="-6.4" vertical-offset="95" max-vertical-offset="850">
+            <state line="15" column="23" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="850">
               <folding />
             </state>
           </provider>
@@ -80,7 +83,7 @@
       <file leaf-file-name="ProviderContracts.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLMUI/views/contract/ProviderContracts.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="17" selection-start="722" selection-end="722" vertical-scroll-proportion="-14.28" vertical-offset="0" max-vertical-offset="629">
+            <state line="21" column="17" selection-start="722" selection-end="722" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="629">
               <folding />
             </state>
           </provider>
@@ -89,7 +92,7 @@
       <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLMUI/views/provider/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="311" selection-end="535" vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="697">
+            <state line="16" column="0" selection-start="311" selection-end="535" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="697">
               <folding />
             </state>
           </provider>
@@ -119,6 +122,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -158,8 +164,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="width" value="1616" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -418,6 +424,14 @@
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -428,23 +442,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -541,14 +547,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24809742" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26179606" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12427594" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1241292" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20082815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -856,9 +862,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/public/css/site.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1207">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1207" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/routes/home.js">
@@ -899,28 +903,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/views/contract/ProviderContracts.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="17" selection-start="722" selection-end="722" vertical-scroll-proportion="-14.28" vertical-offset="0" max-vertical-offset="629">
+        <state line="21" column="17" selection-start="722" selection-end="722" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="629">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/views/provider/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="311" selection-end="535" vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="697">
+        <state line="16" column="0" selection-start="311" selection-end="535" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="697">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/public/bower_components/bootstrap/dist/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1773" column="1" selection-start="32373" selection-end="32373" vertical-scroll-proportion="0.68076396" vertical-offset="29642" max-vertical-offset="99229">
-          <folding />
-        </state>
+        <state line="1773" column="1" selection-start="32373" selection-end="32373" vertical-scroll-proportion="0.68076396" vertical-offset="29642" max-vertical-offset="99229" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/views/contract/contractEdit.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="23" selection-start="543" selection-end="543" vertical-scroll-proportion="-6.4" vertical-offset="95" max-vertical-offset="850">
+        <state line="15" column="23" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="850">
           <folding />
         </state>
       </provider>
@@ -948,7 +950,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/routes/contract.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.4530831" vertical-offset="308" max-vertical-offset="1054">
+        <state line="38" column="0" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.492126" vertical-offset="271" max-vertical-offset="1054">
           <folding />
         </state>
       </provider>
