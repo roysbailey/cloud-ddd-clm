@@ -13,10 +13,10 @@ exports.providerContracts = function(req, res){
                 res.render('contract/ProviderContracts', { provider: provider, contracts: contracts });
                 return;
             });
+        } else {
+            res.redirect('/');
         }
     });
-
-    res.redirect('/');
 }
 
 exports.contractCreate = function(req, res) {
@@ -43,12 +43,13 @@ exports.contractCreatePost = function(req, res) {
 
 exports.contractEdit = function(req, res) {
     var contract = contractRepo.getContract(req.params.contractNo, function(err, contract){
-        var vm = { mode: "update", isCreate: false, createdTakeTwo: 1 === 0, contract: contract};
-        res.render('contract/contractEdit', vm);
-        return;
+        if (contract){
+            var vm = { mode: "update", isCreate: false, createdTakeTwo: 1 === 0, contract: contract};
+            res.render('contract/contractEdit', vm);
+        } else {
+            res.redirect('/');
+        }
     });
-
-    res.redirect('/');
 }
 
 
