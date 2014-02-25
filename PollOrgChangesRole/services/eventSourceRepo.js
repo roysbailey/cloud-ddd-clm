@@ -4,7 +4,7 @@
 
 var Client = require('node-rest-client').Client;
 var restClient = new Client();
-var hostName = "http://localhost:1337";
+var hostName = "http://localhost:1338";
 var eventSourceEntryPoint = hostName + '/providers/notifications';
 
 exports.findFeedContainingUpdate = function(lastImportedItemUpdateDate, callback){

@@ -42,7 +42,7 @@ exports.contractCreatePost = function(req, res) {
 
 
 exports.contractEdit = function(req, res) {
-    var contract = contractRepo.getContract(req.params.contractNo, function(err, contract){
+    var contract = contractRepo.getContract(req.params.ukprn, req.params.contractNo, function(err, contract){
         if (contract){
             var vm = { mode: "update", isCreate: false, createdTakeTwo: 1 === 0, contract: contract};
             res.render('contract/contractEdit', vm);

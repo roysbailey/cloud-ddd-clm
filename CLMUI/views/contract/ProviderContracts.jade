@@ -5,10 +5,10 @@ extends ../layout
 block content
     .container
         if contracts && contracts.length
-            h1 Please select a contract for small #{provider.name}
+            h1 Please select a contract for [#{provider.name}]
             p.lead
                 | When you have selected a contract, you will be able to perform various actions upon it.
-                | you have #{contracts.length} contracts to pick from.
+                | You have #{contracts.length} contracts to pick from.
             table.table.table-striped
                 tr
                     th ContractNo
@@ -24,9 +24,10 @@ block content
                         td #{contract.startDate}
                         td #{contract.endDate}
                         td #{contract.contractValue}
-
-            .well
-                a.btn.btn-success(href="/contract/#{provider.ukprn}/create", role="button") Add New
         else
+            h1 Whoops!
             p.lead
                 | Sorry, no contracts exits for for [#{provider.name}].  Why dont you create one?
+
+        .well
+            a.btn.btn-success(href="/contract/#{provider.ukprn}/create", role="button") Add New

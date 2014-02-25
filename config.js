@@ -8,5 +8,7 @@ exports.config = {
     pollQueuePollInterval: 1000,
 
     orgCache_TableName: 'orgCache',
-    orgCache_PartitionKey: 'orgPartition'
+    orgCache_PartitionKey: 'orgPartition',
+
+    contractStore_TableName: 'contracts'
 };
