@@ -1,0 +1,3 @@
+[contractController][providerContracts:10006840] - Loaded provider
+[contractRepo][getProviderContracts: 10006840] - Azure table open, about to query storage
+[contractController][providerContracts:10006840] - Loaded provider contracts.  Count: 1

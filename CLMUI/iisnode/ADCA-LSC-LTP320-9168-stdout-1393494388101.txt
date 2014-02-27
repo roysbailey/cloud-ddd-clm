@@ -1,0 +1,9 @@
+[providerRepo][searchProviders:Glas] - All providers found: 0
+[providerRepo][searchProviders:Glas] - Num providers matching query: 0
+[providerController][searchProviders:Glas] - Matching providers.  Count: 0
+[providerRepo][searchProviders:Birm] - All providers found: 0
+[providerRepo][searchProviders:Birm] - Num providers matching query: 0
+[providerController][searchProviders:Birm] - Matching providers.  Count: 0
+[providerRepo][searchProviders:Birm] - All providers found: 0
+[providerRepo][searchProviders:Birm] - Num providers matching query: 0
+[providerController][searchProviders:Birm] - Matching providers.  Count: 0

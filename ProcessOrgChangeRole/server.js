@@ -1,8 +1,8 @@
-var eventQueueRepo = require('./../services/eventQueueRepo');
+var eventQueueRepo = require('./services/eventQueueRepo');
 var orgCacheRepo = require('./services/orgCacheRepo');
 var orgEventToCacheMapper = require('./services/orgEventContentToOrgCache');
-var config = require('../config').config;
-var Logger = require('../services/logger').Logger;
+var config = require('./config').config;
+var Logger = require('./services/logger').Logger;
 var logger = new Logger('pollForChanges');
 
 // Start polling new messages on our queue

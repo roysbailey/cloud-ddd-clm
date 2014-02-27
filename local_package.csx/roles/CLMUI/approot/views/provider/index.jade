@@ -1,0 +1,36 @@
+//
+   Created by rbailey on 07/02/14.
+
+extends ../layout
+
+block content
+    .container
+        h1 Welcome to the CLM Portal!
+        p.lead
+            | Please use the form below to select a provider to work on.
+
+        .well
+            form.form-inline(role="form", action="/provider/search", method="GET")
+                .form-group
+                    label.control-label(for="searchText") Search Providers:
+                    input.form-control#searchText(placeholder='Enter Search', name="searchText", value="#{searchText}")
+                button.btn.btn-success(type="submit") Search
+
+        if fromSearch
+            if providers && providers.length
+                p.lead
+                    | The following providers matched your search of [#{searchText}].
+                table.table.table-striped
+                    tr
+                        th UKPRN
+                        th Name
+                        th City
+                    each provider in providers
+                        tr
+                            td
+                                a(href='/contract/#{provider.ukprn}') #{provider.ukprn}
+                            td #{provider.name}
+                            td #{provider.city}
+            else
+                p.lead
+                    | Sorry, no providers matched your search for [#{searchText}].  Please try again!

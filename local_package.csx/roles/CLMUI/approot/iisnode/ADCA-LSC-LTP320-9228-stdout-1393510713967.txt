@@ -1,0 +1,18 @@
+[providerRepo][searchProviders:Birm] - Table open, about to search storage
+[providerRepo][searchProviders:Birm] - All providers found: 14
+[providerRepo][searchProviders:Birm] - Num providers matching query: 14
+[providerController][searchProviders:Birm] - Matching providers.  Count: 6
+[contractController][providerContracts:10006840] - Loaded provider
+[contractRepo][getProviderContracts: 10006840] - Azure table open, about to query storage
+[contractController][providerContracts:10006840] - Loaded provider contracts.  Count: 0
+[contractRepo][saveContract: CWM1] - Azure table open, about to save to storage
+[contractController][contractCreatePost:CWM1] - New contract saved
+[contractController][providerContracts:10006840] - Loaded provider
+[contractRepo][getProviderContracts: 10006840] - Azure table open, about to query storage
+[contractController][providerContracts:10006840] - Loaded provider contracts.  Count: 1
+[contractController][providerContracts:10006840] - Loaded provider
+[contractRepo][getProviderContracts: 10006840] - Azure table open, about to query storage
+[contractController][providerContracts:10006840] - Loaded provider contracts.  Count: 1
+[contractController][providerContracts:10006840] - Loaded provider
+[contractRepo][getProviderContracts: 10006840] - Azure table open, about to query storage
+[contractController][providerContracts:10006840] - Loaded provider contracts.  Count: 1

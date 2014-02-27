@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"ADCA-LSC-LTP320-10836-stderr-1393490247347.txt","computername":"ADCA-LSC-LTP320","pid":10836,"type":"stderr","created":1393490247347},{"file":"ADCA-LSC-LTP320-4540-stderr-1393494769165.txt","computername":"ADCA-LSC-LTP320","pid":4540,"type":"stderr","created":1393494769165},{"file":"ADCA-LSC-LTP320-4540-stdout-1393494769164.txt","computername":"ADCA-LSC-LTP320","pid":4540,"type":"stdout","created":1393494769164},{"file":"ADCA-LSC-LTP320-6412-stderr-1393521196758.txt","computername":"ADCA-LSC-LTP320","pid":6412,"type":"stderr","created":1393521196758},{"file":"ADCA-LSC-LTP320-6412-stdout-1393521196757.txt","computername":"ADCA-LSC-LTP320","pid":6412,"type":"stdout","created":1393521196757},{"file":"ADCA-LSC-LTP320-8864-stderr-1393512600669.txt","computername":"ADCA-LSC-LTP320","pid":8864,"type":"stderr","created":1393512600669},{"file":"ADCA-LSC-LTP320-8864-stdout-1393512600668.txt","computername":"ADCA-LSC-LTP320","pid":8864,"type":"stdout","created":1393512600668},{"file":"ADCA-LSC-LTP320-9168-stderr-1393494388101.txt","computername":"ADCA-LSC-LTP320","pid":9168,"type":"stderr","created":1393494388101},{"file":"ADCA-LSC-LTP320-9168-stdout-1393494388101.txt","computername":"ADCA-LSC-LTP320","pid":9168,"type":"stdout","created":1393494388101},{"file":"ADCA-LSC-LTP320-9228-stderr-1393510713968.txt","computername":"ADCA-LSC-LTP320","pid":9228,"type":"stderr","created":1393510713968},{"file":"ADCA-LSC-LTP320-9228-stdout-1393510713967.txt","computername":"ADCA-LSC-LTP320","pid":9228,"type":"stdout","created":1393510713967}];
+        var lastUpdated = 1393521211256;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>

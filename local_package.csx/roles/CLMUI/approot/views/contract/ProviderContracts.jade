@@ -1,0 +1,33 @@
+//
+   Created by rbailey on 07/02/14.
+
+extends ../layout
+block content
+    .container
+        if contracts && contracts.length
+            h1 Please select a contract for [#{provider.name}]
+            p.lead
+                | When you have selected a contract, you will be able to perform various actions upon it.
+                | You have #{contracts.length} contracts to pick from.
+            table.table.table-striped
+                tr
+                    th ContractNo
+                    th FSP
+                    th Start Date
+                    th End Date
+                    th Contract Value
+                each contract in contracts
+                    tr
+                        td
+                            a(href='/contract/#{provider.ukprn}/#{contract.contractNo}/edit') #{contract.contractNo}
+                        td #{contract.FSPCode}
+                        td #{contract.startDate}
+                        td #{contract.endDate}
+                        td #{contract.contractValue}
+        else
+            h1 Whoops!
+            p.lead
+                | Sorry, no contracts exits for for [#{provider.name}].  Why dont you create one?
+
+        .well
+            a.btn.btn-success(href="/contract/#{provider.ukprn}/create", role="button") Add New

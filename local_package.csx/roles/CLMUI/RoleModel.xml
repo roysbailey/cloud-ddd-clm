@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RoleModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CLMUI" version="2.2.6492.2" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <Startup>
+    <Task commandLine="setup_web.cmd &gt; log.txt" executionContext="elevated" relativePath="approot\bin">
+      <Environment>
+        <Variable name="EMULATED">
+          <RoleInstanceValue xpath="/RoleEnvironment/Deployment/@emulated" />
+        </Variable>
+        <Variable name="RUNTIMEID" value="node;iisnode" />
+        <Variable name="RUNTIMEURL" value="http://az413943.vo.msecnd.net/node/0.6.20.exe;http://az413943.vo.msecnd.net/iisnode/0.1.21.exe" />
+      </Environment>
+    </Task>
+    <Task commandLine="node.cmd ..\startup.js" executionContext="elevated" relativePath="approot\bin">
+      <Environment />
+    </Task>
+  </Startup>
+  <Runtime />
+  <Properties>
+    <Property name="TargetFrameworkVersion" value="v4.0" />
+    <Property name="TargetRuntimeVersion" value="v4.0" />
+  </Properties>
+  <Sites>
+    <Site name="Web" physicalDirectory="C:\data\git\cloud-ddd-clm\CLMUI">
+      <Bindings>
+        <Binding name="Endpoint1" endpointName="Endpoint1" />
+      </Bindings>
+    </Site>
+  </Sites>
+</RoleModel>

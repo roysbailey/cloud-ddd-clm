@@ -1,0 +1,37 @@
+//
+   Created by rbailey on 07/02/14.
+
+extends ../layout
+
+block content
+    .container-fluid
+        .row
+            .col-sm-3.col-md-2.sidebar
+                ul.nav.nav-sidebar
+                    li
+                        a(href='/') Home
+                    li
+                        a(href='/provider') Manage Contracts
+                    li
+                        a(href='/provider') My Tasks
+                    li
+                        a(href='/provider') Reports
+                    li
+                        a(href='/provider') Support
+
+        .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+                h1.page-header Welcome to the CLM Dashboard!
+                .row
+                    .col-xs-6.col-sm-3
+                        img.img-circle(src="http://lorempixel.com/200/200/nature/1/")
+                        .text-center.text-primary Pending Approvals
+                    .col-xs-6.col-sm-3
+                        img.img-circle(src="http://lorempixel.com/200/200/nature/2/")
+                        .text-center.text-primary Approvals in last week
+                    .col-xs-6.col-sm-3
+                        img.img-circle(src="http://lorempixel.com/200/200/nature/3/")
+                        .text-center.text-primary Overdue Approvals
+                    .col-xs-6.col-sm-3
+                        img.img-circle(src="http://lorempixel.com/200/200/nature/4/")
+                        .text-center.text-primary Dashboard Stats
+    hr

@@ -1,0 +1,44 @@
+//
+   Created by rbailey on 07/02/14.
+extends ../layout
+block content
+    .container
+        if isCreate
+            h1 Welcome to CREATE contract for provider: #{contract.ukprn}
+            p.lead
+                | Please enter details of your new contract below.
+        else
+            h1 Welcome to EDIT A contract for provider: #{contract.ukprn}
+            p.lead
+                | Please update details of your contract below.
+
+        form(role="form", action="/contract/#{contract.ukprn}", method="post")
+            .form-group
+                input#ukprn(name="ukprn", value="#{contract.ukprn}", type="hidden")
+                label.control-label(for="contractNo") Contract Number:
+                input.form-control#contractNo(name="contractNo", value="#{contract.contractNo}", readonly=!isCreate)
+            .form-group
+                label.control-label(for="startDate") Start Date:
+                input.form-control#startDate(placeholder='DD/MM/YYYY', name="startDate", value="#{contract.startDate}")
+            .form-group
+                label.control-label(for="endDate") End Date:
+                input.form-control#endDate(placeholder='DD/MM/YYYY', name="endDate", value="#{contract.endDate}")
+            .form-group
+                label.control-label(for="FSPCode") FSP:
+                select.form-control#FSPCode(name="FSPCode")
+                    - fsps = [ 'ASTO_1415', '16-18APPS_1415', 'OLASS_1415']
+                    - for fsp in fsps
+                        option(selected=fsp == contract.FSPCode) #{fsp}
+            .form-group
+                label.control-label(for="orgUnitName") Org Unit:
+                select.form-control#orgUnitName(name="orgUnitName")
+                    - orgUnits = [ 'CWM', 'CNM', 'CEM', 'SWE']
+                    - for orgUnit in orgUnits
+                        option(selected=orgUnit == contract.orgUnitName) #{orgUnit}
+            .form-group
+                label.control-label(for="contractValue") Contract Value:
+                input.form-control#contractValue(placeholder='0.00', name="contractValue", value="#{contract.contractValue}")
+            .form-group
+                .well
+                    button.btn.btn-success(type="submit") Save
+                    a.btn.btn-danger(href="/contract/#{contract.ukprn}", role="button") Cancel

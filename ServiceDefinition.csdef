@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ServiceDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="cloud-ddd-cml" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+<ServiceDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="cloud-ddd-clm" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
   <WebRole name="CLMUI" vmsize="ExtraSmall">
     <Imports />
     <Startup>
@@ -9,7 +9,7 @@
             <RoleInstanceValue xpath="/RoleEnvironment/Deployment/@emulated" />
           </Variable>
           <Variable name="RUNTIMEID" value="node;iisnode" />
-          <Variable name="RUNTIMEURL" value="" />
+          <Variable name="RUNTIMEURL" value="http://az413943.vo.msecnd.net/node/0.6.20.exe;http://az413943.vo.msecnd.net/iisnode/0.1.21.exe" />
         </Environment>
       </Task>
       <Task commandLine="node.cmd ..\startup.js" executionContext="elevated" />
@@ -63,7 +63,7 @@
             <RoleInstanceValue xpath="/RoleEnvironment/Deployment/@emulated" />
           </Variable>
           <Variable name="RUNTIMEID" value="node" />
-          <Variable name="RUNTIMEURL" value="" />
+          <Variable name="RUNTIMEURL" value="http://az413943.vo.msecnd.net/node/0.6.20.exe" />
         </Environment>
       </Task>
       <Task commandLine="node.cmd .\startup.js" executionContext="elevated" />
