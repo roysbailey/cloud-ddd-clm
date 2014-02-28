@@ -1,17 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ServiceConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" serviceName="cloud-ddd-clm" osFamily="2" osVersion="*" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration">
   <Role name="ProcessOrgChangeRole">
-    <ConfigurationSettings />
+    <ConfigurationSettings>
+      <Setting name="AZURE_STORAGE_ACCOUNT" value="clouddddcml" />
+      <Setting name="AZURE_STORAGE_ACCESS_KEY" value="oDJq+02aw24Sh/B0GZVMi6enni7GZypaK7rFEZfX2rbgnLYep4OwOEvTH+iyZNNOzdQNbMjaS3qEGeeS0bx3bA!!" />
+    </ConfigurationSettings>
     <Instances count="1" />
     <Certificates />
   </Role>
   <Role name="PollOrgChangesRole">
-    <ConfigurationSettings />
+    <ConfigurationSettings>
+      <Setting name="AZURE_STORAGE_ACCOUNT" value="clouddddcml" />
+      <Setting name="AZURE_STORAGE_ACCESS_KEY" value="oDJq+02aw24Sh/B0GZVMi6enni7GZypaK7rFEZfX2rbgnLYep4OwOEvTH+iyZNNOzdQNbMjaS3qEGeeS0bx3bA!!" />
+    </ConfigurationSettings>
     <Instances count="1" />
     <Certificates />
   </Role>
   <Role name="CLMUI">
-    <ConfigurationSettings />
+    <ConfigurationSettings>
+      <Setting name="AZURE_STORAGE_ACCOUNT" value="clouddddcml" />
+      <Setting name="AZURE_STORAGE_ACCESS_KEY" value="oDJq+02aw24Sh/B0GZVMi6enni7GZypaK7rFEZfX2rbgnLYep4OwOEvTH+iyZNNOzdQNbMjaS3qEGeeS0bx3bA!!" />
+    </ConfigurationSettings>
     <Instances count="1" />
     <Certificates />
   </Role>

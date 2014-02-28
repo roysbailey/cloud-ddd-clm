@@ -1,0 +1,25 @@
+[providerRepo][searchProviders:Man] - Table open, about to search storage
+[providerRepo][searchProviders:Man] - All providers found: 14
+[providerRepo][searchProviders:Man] - Num providers matching query: 14
+[providerController][searchProviders:Man] - Matching providers.  Count: 1
+[contractController][providerContracts:10007837] - Loaded provider
+[contractRepo][getProviderContracts: 10007837] - Azure table open, about to query storage
+[contractController][providerContracts:10007837] - Loaded provider contracts.  Count: 0
+[contractController][providerContracts:10007837] - Loaded provider
+[contractRepo][getProviderContracts: 10007837] - Azure table open, about to query storage
+[contractController][providerContracts:10007837] - Loaded provider contracts.  Count: 0
+[contractController][providerContracts:10007837] - Loaded provider
+[contractRepo][getProviderContracts: 10007837] - Azure table open, about to query storage
+[contractController][providerContracts:10007837] - Loaded provider contracts.  Count: 0
+[contractController][providerContracts:10007837] - Loaded provider
+[contractRepo][getProviderContracts: 10007837] - Azure table open, about to query storage
+[contractController][providerContracts:10007837] - Loaded provider contracts.  Count: 0
+[contractController][providerContracts:10007837] - Loaded provider
+[contractRepo][getProviderContracts: 10007837] - Azure table open, about to query storage
+[contractController][providerContracts:10007837] - Loaded provider contracts.  Count: 0
+[contractController][providerContracts:10007837] - Loaded provider
+[contractRepo][getProviderContracts: 10007837] - Azure table open, about to query storage
+[contractController][providerContracts:10007837] - Loaded provider contracts.  Count: 0
+[contractController][providerContracts:10007837] - Loaded provider
+[contractRepo][getProviderContracts: 10007837] - Azure table open, about to query storage
+[contractController][providerContracts:10007837] - Loaded provider contracts.  Count: 0

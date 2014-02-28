@@ -2,51 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e509d0cd-d738-4e15-8c19-9c72793beb72" name="Default" comment="Merge branch 'master' of https://github.com/roysbailey/cloud-ddd-clm&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;CLMUI/routes/contract.js&#10;&#9;CLMUI/services/contractRepo.js&#10;&#9;CLMUI/views/contract/contractEdit.jade&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PollOrgChangesRole/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ProcessOrgChangeRole/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ProcessOrgChangeRole/services/eventQueueRepo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PollOrgChangesRole/services/logger.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ProcessOrgChangeRole/services/logger.js" />
-      <change type="MOVED" beforePath="C:\data\git\cloud-ddd-clm\config.js" afterPath="$PROJECT_DIR$/CLMUI/config.js" />
-      <change type="MOVED" beforePath="C:\data\git\cloud-ddd-clm\services\eventQueueRepo.js" afterPath="$PROJECT_DIR$/PollOrgChangesRole/services/eventQueueRepo.js" />
-      <change type="MOVED" beforePath="C:\data\git\cloud-ddd-clm\services\logger.js" afterPath="$PROJECT_DIR$/CLMUI/services/logger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloud_package.cspkg" afterPath="$PROJECT_DIR$/cloud_package.cspkg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/CLMUI/RoleModel.xml" afterPath="$PROJECT_DIR$/local_package.csx/roles/CLMUI/RoleModel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/PollOrgChangesRole/RoleModel.xml" afterPath="$PROJECT_DIR$/local_package.csx/roles/PollOrgChangesRole/RoleModel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/RoleModel.xml" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/RoleModel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServiceConfiguration.Cloud.cscfg" afterPath="$PROJECT_DIR$/ServiceConfiguration.Cloud.cscfg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServiceConfiguration.Local.cscfg" afterPath="$PROJECT_DIR$/ServiceConfiguration.Local.cscfg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServiceDefinition.csdef" afterPath="$PROJECT_DIR$/ServiceDefinition.csdef" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/ServiceDefinition.csdef" afterPath="$PROJECT_DIR$/local_package.csx/ServiceDefinition.csdef" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/ServiceDefinition.rd" afterPath="$PROJECT_DIR$/local_package.csx/ServiceDefinition.rd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/ServiceDefinition.rdsc" afterPath="$PROJECT_DIR$/local_package.csx/ServiceDefinition.rdsc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLMUI/Web.config" afterPath="$PROJECT_DIR$/CLMUI/Web.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLMUI/routes/contract.js" afterPath="$PROJECT_DIR$/CLMUI/routes/contract.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLMUI/services/contractRepo.js" afterPath="$PROJECT_DIR$/CLMUI/services/contractRepo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploymentSettings.json" afterPath="$PROJECT_DIR$/deploymentSettings.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js" afterPath="$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProcessOrgChangeRole/services/orgCacheRepo.js" afterPath="$PROJECT_DIR$/ProcessOrgChangeRole/services/orgCacheRepo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLMUI/package.json" afterPath="$PROJECT_DIR$/CLMUI/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PollOrgChangesRole/package.json" afterPath="$PROJECT_DIR$/PollOrgChangesRole/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/dateformat/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/dateformat/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/duplexer/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/duplexer/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/envconf/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/envconf/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/mpns/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/mpns/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/node-uuid/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/node-uuid/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/request/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/request/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/request/node_modules/http-signature/node_modules/asn1/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/request/node_modules/http-signature/node_modules/asn1/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/request/node_modules/http-signature/node_modules/assert-plus/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/request/node_modules/http-signature/node_modules/assert-plus/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/request/node_modules/http-signature/node_modules/ctype/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/request/node_modules/http-signature/node_modules/ctype/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/through/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/through/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/tunnel/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/tunnel/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/validator/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/validator/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/wns/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/wns/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/xml2js/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/xml2js/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/xml2js/node_modules/sax/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/xml2js/node_modules/sax/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/xmlbuilder/package.json" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/node_modules/azure/node_modules/xmlbuilder/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLMUI/routes/provider.js" afterPath="$PROJECT_DIR$/CLMUI/routes/provider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLMUI/services/providerRepo.js" afterPath="$PROJECT_DIR$/CLMUI/services/providerRepo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PollOrgChangesRole/server.js" afterPath="$PROJECT_DIR$/PollOrgChangesRole/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProcessOrgChangeRole/server.js" afterPath="$PROJECT_DIR$/ProcessOrgChangeRole/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/server.js" afterPath="$PROJECT_DIR$/local_package.csx/roles/ProcessOrgChangeRole/approot/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js" afterPath="$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLMUI/iisnode/index.html" afterPath="$PROJECT_DIR$/CLMUI/iisnode/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/CLMUI/approot/iisnode/index.html" afterPath="$PROJECT_DIR$/local_package.csx/roles/CLMUI/approot/iisnode/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_package.csx/roles/CLMUI/approot/bin/log.txt" afterPath="$PROJECT_DIR$/local_package.csx/roles/CLMUI/approot/bin/log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLMUI/server.js" afterPath="$PROJECT_DIR$/CLMUI/server.js" />
     </list>
     <ignored path="cloud-ddd-cml.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,15 +47,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CLMUI/routes/home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="provider.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLMUI/routes/provider.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,16 +59,7 @@
       <file leaf-file-name="providerRepo.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLMUI/services/providerRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="163" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logger.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CLMUI/services/logger.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="9" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+            <state line="9" column="0" selection-start="163" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
@@ -126,7 +77,7 @@
       <file leaf-file-name="eventQueueRepo.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/eventQueueRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="116" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
+            <state line="8" column="0" selection-start="116" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1360">
               <folding />
             </state>
           </provider>
@@ -135,25 +86,43 @@
       <file leaf-file-name="contractRepo.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLMUI/services/contractRepo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="26" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+            <state line="20" column="26" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1411">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="36" selection-start="1298" selection-end="1298" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2074">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="30" selection-start="2192" selection-end="2192" vertical-scroll-proportion="0.0" vertical-offset="1000" max-vertical-offset="1972">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orgCacheRepo.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/services/orgCacheRepo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="0" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1683">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
+        <entry file="file://$PROJECT_DIR$/CLMUI/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="9" selection-start="3164" selection-end="3164" vertical-scroll-proportion="0.6515913" vertical-offset="750" max-vertical-offset="2074">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="statusRepo.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="524" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
+            <state line="5" column="35" selection-start="224" selection-end="224" vertical-scroll-proportion="0.18162394" vertical-offset="0" max-vertical-offset="527">
               <folding />
             </state>
           </provider>
@@ -188,7 +157,6 @@
         <option value="$PROJECT_DIR$/CLMUI/views/layout.jade" />
         <option value="$PROJECT_DIR$/CLMUI/views/home/index.jade" />
         <option value="$PROJECT_DIR$/CLMUI/views/provider/index.jade" />
-        <option value="$PROJECT_DIR$/CLMUI/server.js" />
         <option value="$PROJECT_DIR$/CLMUI/views/contract/contractEdit.jade" />
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/CLMUI/views/contract/ProviderContracts.jade" />
@@ -201,6 +169,7 @@
         <option value="$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js" />
         <option value="$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js" />
         <option value="$PROJECT_DIR$/PollOrgChangesRole/server.js" />
+        <option value="$PROJECT_DIR$/CLMUI/server.js" />
       </list>
     </option>
   </component>
@@ -265,7 +234,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PollOrgChangesRole" />
+              <option name="myItemId" value="CLMUI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -283,7 +252,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../dropbox/dev/PluralSight/Node/ExpressJS/3-expressjs-m3/after/module3" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistory" value="Last processed event&#10;are new&#10;No new events since last poll&#10;./../services/eventQueueRepo&#10;jade&#10;liveedit&#10;track" />
+    <property name="SearchEverywhereHistory" value="Update applied for&#10;Last processed event&#10;are new&#10;No new events since last poll&#10;./../services/eventQueueRepo&#10;jade&#10;liveedit&#10;track" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
   </component>
@@ -308,14 +277,6 @@
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -326,15 +287,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -437,9 +406,9 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24809742" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26179606" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21613394" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21613394" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16208178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16133828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26717559" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -449,8 +418,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -517,6 +486,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="524" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/node_modules/azure/lib/util/validate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="482" column="46" selection-start="17033" selection-end="17033" vertical-scroll-proportion="0.6638418" vertical-offset="7959" max-vertical-offset="8313" />
@@ -644,109 +620,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/services/contractRepo_Local.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/services/providerRepo_Local.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/azure/lib/services/core/serviceclient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="690" column="0" selection-start="26024" selection-end="26024" vertical-scroll-proportion="0.0" vertical-offset="11374" max-vertical-offset="14161">
-          <folding />
-        </state>
+        <state line="690" column="0" selection-start="26024" selection-end="26024" vertical-scroll-proportion="0.0" vertical-offset="11374" max-vertical-offset="14161" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/azure/lib/services/table/tableservice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="0" selection-start="13560" selection-end="13560" vertical-scroll-proportion="0.0" vertical-offset="4744" max-vertical-offset="15283">
-          <folding />
-        </state>
+        <state line="300" column="0" selection-start="13560" selection-end="13560" vertical-scroll-proportion="0.0" vertical-offset="4744" max-vertical-offset="15283" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/views/contract/ProviderContracts.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="12" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0" vertical-offset="253" max-vertical-offset="663">
-          <folding />
-        </state>
+        <state line="26" column="12" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0" vertical-offset="253" max-vertical-offset="663" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/startup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
+        <state line="11" column="0" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/services/eventQueueRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/services/logger.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/services/orgCacheRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/services/orgEventContentToOrgCache.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="7" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="25" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1972">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CLMUI/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="45" selection-start="729" selection-end="729" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding />
-        </state>
+        <state line="15" column="7" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/services/logger.js">
@@ -798,13 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="524" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/eventSourceRepo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="9" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.0" vertical-offset="443" max-vertical-offset="1802">
@@ -812,9 +734,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/services/statusRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="1" selection-start="2897" selection-end="2897" vertical-scroll-proportion="0.0" vertical-offset="763" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="9" selection-start="3164" selection-end="3164" vertical-scroll-proportion="0.6515913" vertical-offset="750" max-vertical-offset="2074">
+        <state line="33" column="36" selection-start="1298" selection-end="1298" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="30" selection-start="2192" selection-end="2192" vertical-scroll-proportion="0.0" vertical-offset="1000" max-vertical-offset="1972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/services/orgCacheRepo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLMUI/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="35" selection-start="224" selection-end="224" vertical-scroll-proportion="0.18162394" vertical-offset="0" max-vertical-offset="527">
           <folding />
         </state>
       </provider>

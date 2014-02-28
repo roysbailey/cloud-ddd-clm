@@ -16,6 +16,12 @@
   </Startup>
   <Runtime protocolVersion="2011-03-08">
     <Environment>
+      <Variable name="AZURE_STORAGE_ACCOUNT">
+        <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/ConfigurationSettings/ConfigurationSetting[@name='AZURE_STORAGE_ACCOUNT']/@value" />
+      </Variable>
+      <Variable name="AZURE_STORAGE_ACCESS_KEY">
+        <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/ConfigurationSettings/ConfigurationSetting[@name='AZURE_STORAGE_ACCESS_KEY']/@value" />
+      </Variable>
       <Variable name="PORT">
         <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/Endpoints/Endpoint[@name='HttpIn']/@port" />
       </Variable>

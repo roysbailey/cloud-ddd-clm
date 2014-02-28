@@ -3,7 +3,7 @@ var express = require('express'),
     home = require('./routes/home'),
     provider = require('./routes/provider'),
     contract = require('./routes/contract'),
-    port = process.env.port || 1337;
+    port = process.env.port || 8080;
 
 var app = express();
 

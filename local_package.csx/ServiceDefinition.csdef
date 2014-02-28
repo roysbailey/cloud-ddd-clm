@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ServiceDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="cloud-ddd-cml" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+<ServiceDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="cloud-ddd-clm" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
   <WebRole name="CLMUI" vmsize="ExtraSmall">
     <LocalResources>
       <LocalStorage name="DiagnosticStore" sizeInMB="4096" cleanOnRoleRecycle="false" />
     </LocalResources>
-    <ConfigurationSettings />
+    <ConfigurationSettings>
+      <Setting name="AZURE_STORAGE_ACCESS_KEY" />
+      <Setting name="AZURE_STORAGE_ACCOUNT" />
+    </ConfigurationSettings>
     <Endpoints>
-      <InputEndpoint name="Endpoint1" protocol="http" port="8081" localPort="8081" />
+      <InputEndpoint name="EndpointWebUI" protocol="http" port="80" localPort="80" />
     </Endpoints>
     <Certificates />
   </WebRole>
@@ -14,20 +17,22 @@
     <LocalResources>
       <LocalStorage name="DiagnosticStore" sizeInMB="4096" cleanOnRoleRecycle="false" />
     </LocalResources>
-    <ConfigurationSettings />
-    <Endpoints>
-      <InputEndpoint name="HttpIn" protocol="tcp" port="8080" localPort="8080" />
-    </Endpoints>
+    <ConfigurationSettings>
+      <Setting name="AZURE_STORAGE_ACCESS_KEY" />
+      <Setting name="AZURE_STORAGE_ACCOUNT" />
+    </ConfigurationSettings>
+    <Endpoints />
     <Certificates />
   </WorkerRole>
   <WorkerRole name="ProcessOrgChangeRole">
     <LocalResources>
       <LocalStorage name="DiagnosticStore" sizeInMB="4096" cleanOnRoleRecycle="false" />
     </LocalResources>
-    <ConfigurationSettings />
-    <Endpoints>
-      <InputEndpoint name="HttpIn" protocol="tcp" port="80" localPort="80" />
-    </Endpoints>
+    <ConfigurationSettings>
+      <Setting name="AZURE_STORAGE_ACCESS_KEY" />
+      <Setting name="AZURE_STORAGE_ACCOUNT" />
+    </ConfigurationSettings>
+    <Endpoints />
     <Certificates />
   </WorkerRole>
 </ServiceDefinition>

@@ -6,12 +6,12 @@ C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>if "true" ==
 C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>echo Running in emulator adding iisnode to application host config 
 Running in emulator adding iisnode to application host config
 
-C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>FOR /F "tokens=1,2 delims=/" %a in (""C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config" ") DO set FN=%a  & set OPN=%b 
+C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>FOR /F "tokens=1,2 delims=/" %a in (""C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config" ") DO set FN=%a  & set OPN=%b 
 
-C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>set FN="C:\Program Files\IIS Express\appcmd.exe"   & set OPN=apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config"  
+C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>set FN="C:\Program Files\IIS Express\appcmd.exe"   & set OPN=apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config"  
 
-C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>if "apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config" " == ""C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config" " (
-echo "Could not parse appcmd '"C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config"  for configuration file, exiting"  
+C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>if "apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config" " == ""C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config" " (
+echo "Could not parse appcmd '"C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config"  for configuration file, exiting"  
  goto error 
 ) 
 
@@ -23,7 +23,7 @@ C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>if "AMD64" =
 
 C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>set
 ALLUSERSPROFILE=C:\ProgramData
-APPCMD="C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config" 
+APPCMD="C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config" 
 APPDATA=C:\Users\rbailey\AppData\Roaming
 AWS_ACCESS_KEY_ID=AKIAJOSOYUKAMCSJ5K5Q
 AWS_SECRET_ACCESS_KEY=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
@@ -36,7 +36,7 @@ CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
 CommonProgramW6432=C:\Program Files\Common Files
 COMPUTERNAME=ADCA-LSC-LTP320
 ComSpec=C:\Windows\system32\cmd.exe
-DiagnosticStore=C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\directory\DiagnosticStore\
+DiagnosticStore=C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\directory\DiagnosticStore\
 EMULATED=true
 FN="C:\Program Files\IIS Express\appcmd.exe" 
 FP_NO_HOST_CHECK=NO
@@ -51,7 +51,7 @@ LOCALAPPDATA=C:\Users\rbailey\AppData\Local
 LOGONSERVER=\\ADCA-DC-01
 MONITORING_SESSION_NAME=devFabric.mainSession
 NUMBER_OF_PROCESSORS=8
-OPN=apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config" 
+OPN=apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config" 
 OS=Windows_NT
 PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 PROCESSOR_ARCHITECTURE=AMD64
@@ -65,8 +65,8 @@ ProgramW6432=C:\Program Files
 PROMPT=$P$G
 PSModulePath=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\PowerShell\Modules\;C:\Program Files (x86)\AWS Tools\PowerShell\;C:\Program Files (x86)\Microsoft SDKs\Windows Azure\PowerShell\
 PUBLIC=C:\Users\Public
-RoleDeploymentID=deployment22(12)
-RoleInstanceID=deployment22(12).cloud-ddd-cml.CLMUI_IN_0
+RoleDeploymentID=deployment22(14)
+RoleInstanceID=deployment22(14).cloud-ddd-clm.CLMUI_IN_0
 RoleName=CLMUI
 RUNTIMEID=node;iisnode
 RUNTIMEURL=http://az413943.vo.msecnd.net/node/0.6.20.exe;http://az413943.vo.msecnd.net/iisnode/0.1.21.exe
@@ -91,30 +91,30 @@ _DF_STATE_DIRECTORY=C:\Users\rbailey\AppData\Local\dftmp\
 __IISCONFIGURATOR_SITE_CLEANUP_PREFIX_=deployment22(
 RdRoleRoot=C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI
 RoleRoot=C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI
-RdRoleId=deployment22(12).cloud-ddd-cml.CLMUI_IN_0
-TEMP=C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp
-TMP=C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp
+RdRoleId=deployment22(14).cloud-ddd-clm.CLMUI_IN_0
+TEMP=C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp
+TMP=C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp
 PATH=%SystemRoot%\system32\WindowsPowerShell\v1.0\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files (x86)\Rational\common;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;c:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\nodejs\;C:\Program Files (x86)\Git\cmd;C:\Program Files\Microsoft\Web Platform Installer\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Users\rbailey\AppData\Roaming\npm;C:\Program Files\Microsoft SDKs\Windows Azure\Emulator\devfabric\;C:\Program Files\Microsoft SDKs\Windows Azure\Emulator\devfabric\x86\;C:\Program Files\Microsoft SDKs\Windows Azure\Emulator\devfabric\x64\;C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\base\x64;C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\base\x86;C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\diagnostics\x64;
 RdServerNamePipe=\\.\pipe\RdRuntimeServer
 RdNamedPipeTimeoutInSeconds=30
-__WaRuntimeAgent__=WA-Runtime-f7c8a8dfc8399b2215eea8134978bed5
+__WaRuntimeAgent__=WA-Runtime-32058afb916376d22634c6f9ca2b324b
 
 C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>echo Using iisnode binaries location 'C:\Program Files (x86)\iisnode-dev\release\x64' 
 Using iisnode binaries location 'C:\Program Files (x86)\iisnode-dev\release\x64'
 
-C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>echo installing iisnode module using AppCMD alias "C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config"  
-installing iisnode module using AppCMD alias "C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config" 
+C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>echo installing iisnode module using AppCMD alias "C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config"  
+installing iisnode module using AppCMD alias "C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config" 
 
-C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>"C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config"  install module /name:"iisnode" /image:"C:\Program Files (x86)\iisnode-dev\release\x64\iisnode.dll" 
+C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>"C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config"  install module /name:"iisnode" /image:"C:\Program Files (x86)\iisnode-dev\release\x64\iisnode.dll" 
 GLOBAL MODULE object "iisnode" added
 MODULE object "iisnode" added
 
-C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>set apphostconfigfile="C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config"  
+C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>set apphostconfigfile="C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config"  
 
 C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>powershell -c "set-executionpolicy unrestricted" 
 
-C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>powershell .\ChangeConfig.ps1 "C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config"  
-Adding iisnode section to config file 'C:\Users\rbailey\AppData\Local\dftmp\Resources\3125565b-1b7d-4902-80ed-ee03d43e43cd\temp\temp\RoleTemp\applicationHost.config'
+C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>powershell .\ChangeConfig.ps1 "C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config"  
+Adding iisnode section to config file 'C:\Users\rbailey\AppData\Local\dftmp\Resources\a9fe164e-712e-4310-8721-d20b4e73370d\temp\temp\RoleTemp\applicationHost.config'
 
 C:\data\git\cloud-ddd-clm\local_package.csx\roles\CLMUI\approot\bin>if 0 NEQ 0 goto error 
 

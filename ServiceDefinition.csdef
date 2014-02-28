@@ -5,6 +5,12 @@
     <Startup>
       <Task commandLine="setup_web.cmd &gt; log.txt" executionContext="elevated">
         <Environment>
+          <Variable name="AZURE_STORAGE_ACCOUNT">
+            <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/ConfigurationSettings/ConfigurationSetting[@name='AZURE_STORAGE_ACCOUNT']/@value" />
+          </Variable>
+          <Variable name="AZURE_STORAGE_ACCESS_KEY">
+            <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/ConfigurationSettings/ConfigurationSetting[@name='AZURE_STORAGE_ACCESS_KEY']/@value" />
+          </Variable>
           <Variable name="EMULATED">
             <RoleInstanceValue xpath="/RoleEnvironment/Deployment/@emulated" />
           </Variable>
@@ -14,13 +20,17 @@
       </Task>
       <Task commandLine="node.cmd ..\startup.js" executionContext="elevated" />
     </Startup>
+    <ConfigurationSettings>
+      <Setting name="AZURE_STORAGE_ACCOUNT" />
+      <Setting name="AZURE_STORAGE_ACCESS_KEY" />
+    </ConfigurationSettings>
     <Endpoints>
-      <InputEndpoint name="Endpoint1" protocol="http" port="8081" />
+      <InputEndpoint name="EndpointWebUI" protocol="http" port="80" />
     </Endpoints>
     <Sites>
       <Site name="Web">
         <Bindings>
-          <Binding name="Endpoint1" endpointName="Endpoint1" />
+          <Binding name="EndpointWebUI" endpointName="EndpointWebUI" />
         </Bindings>
       </Site>
     </Sites>
@@ -38,11 +48,19 @@
       </Task>
       <Task commandLine="node.cmd .\startup.js" executionContext="elevated" />
     </Startup>
-    <Endpoints>
-      <InputEndpoint name="HttpIn" protocol="tcp" port="80" />
-    </Endpoints>
+    <ConfigurationSettings>
+      <Setting name="AZURE_STORAGE_ACCOUNT" />
+      <Setting name="AZURE_STORAGE_ACCESS_KEY" />
+    </ConfigurationSettings>
+    <Endpoints />
     <Runtime>
       <Environment>
+        <Variable name="AZURE_STORAGE_ACCOUNT">
+          <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/ConfigurationSettings/ConfigurationSetting[@name='AZURE_STORAGE_ACCOUNT']/@value" />
+        </Variable>
+        <Variable name="AZURE_STORAGE_ACCESS_KEY">
+          <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/ConfigurationSettings/ConfigurationSetting[@name='AZURE_STORAGE_ACCESS_KEY']/@value" />
+        </Variable>
         <Variable name="PORT">
           <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/Endpoints/Endpoint[@name='HttpIn']/@port" />
         </Variable>
@@ -68,11 +86,19 @@
       </Task>
       <Task commandLine="node.cmd .\startup.js" executionContext="elevated" />
     </Startup>
-    <Endpoints>
-      <InputEndpoint name="HttpIn" protocol="tcp" port="8080" />
-    </Endpoints>
+    <ConfigurationSettings>
+      <Setting name="AZURE_STORAGE_ACCOUNT" />
+      <Setting name="AZURE_STORAGE_ACCESS_KEY" />
+    </ConfigurationSettings>
+    <Endpoints />
     <Runtime>
       <Environment>
+        <Variable name="AZURE_STORAGE_ACCOUNT">
+          <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/ConfigurationSettings/ConfigurationSetting[@name='AZURE_STORAGE_ACCOUNT']/@value" />
+        </Variable>
+        <Variable name="AZURE_STORAGE_ACCESS_KEY">
+          <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/ConfigurationSettings/ConfigurationSetting[@name='AZURE_STORAGE_ACCESS_KEY']/@value" />
+        </Variable>
         <Variable name="PORT">
           <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/Endpoints/Endpoint[@name='HttpIn']/@port" />
         </Variable>

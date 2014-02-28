@@ -3,6 +3,12 @@
   <Startup>
     <Task commandLine="setup_web.cmd &gt; log.txt" executionContext="elevated" relativePath="approot\bin">
       <Environment>
+        <Variable name="AZURE_STORAGE_ACCOUNT">
+          <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/ConfigurationSettings/ConfigurationSetting[@name='AZURE_STORAGE_ACCOUNT']/@value" />
+        </Variable>
+        <Variable name="AZURE_STORAGE_ACCESS_KEY">
+          <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/ConfigurationSettings/ConfigurationSetting[@name='AZURE_STORAGE_ACCESS_KEY']/@value" />
+        </Variable>
         <Variable name="EMULATED">
           <RoleInstanceValue xpath="/RoleEnvironment/Deployment/@emulated" />
         </Variable>
@@ -22,7 +28,7 @@
   <Sites>
     <Site name="Web" physicalDirectory="C:\data\git\cloud-ddd-clm\CLMUI">
       <Bindings>
-        <Binding name="Endpoint1" endpointName="Endpoint1" />
+        <Binding name="EndpointWebUI" endpointName="EndpointWebUI" />
       </Bindings>
     </Site>
   </Sites>
