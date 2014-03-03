@@ -1,11 +1,17 @@
+// Require our external dependencies.
 var express = require('express'),
+    io = require('socket.io'),
     path = require('path'),
+    async = require('async'),
     home = require('./routes/home'),
     provider = require('./routes/provider'),
     contract = require('./routes/contract'),
-    port = process.env.port || 8080;
+    pollForChanges = require('./processors/pollForChanges').pollForChanges;
 
-var app = express();
+// Create our express server, and hook up to http and socket.io
+var app = express()
+    ,server = require('http').createServer(app)
+    ,io = io.listen(server);
 
 app.configure(function () {
     app.set('views', __dirname + '/views');
@@ -15,6 +21,7 @@ app.configure(function () {
     app.use(express.static(path.join(__dirname, 'public')));
 });
 
+// Configure our routes.
 app.get('/', home.index);
 app.get('/provider', provider.index);
 app.get('/provider/search', provider.providerSearch);
@@ -23,4 +30,40 @@ app.get('/contract/:ukprn/create', contract.contractCreate);
 app.get('/contract/:ukprn/:contractNo/edit', contract.contractEdit);
 app.post('/contract/:ukprn', contract.contractCreatePost);
 
-app.listen(port);
+// In the background, start polling the azure queue for any changes to the underlying org cache.
+pollForChanges(onRefreshedOrgsCallback, onOrgEventCallback);
+
+// Listen on the web port for our web app requests.
+var port = process.env.port || 8080;
+server.listen(port);
+
+io.sockets.on('connection', function (socket) {
+    socket.on('selected provider', function (data) {
+        socket.set('provider', data);
+    });
+});
+
+// Called whenever a refresh has occurred, regardless of whether or NOT any updates were made...
+// TODO - look a socket.io namespances here!
+function onRefreshedOrgsCallback(err, data) {
+    if (!err) {
+        var connectedClients = io.sockets.clients();
+        async.each(connectedClients,
+            function(item, callback){
+                // Sending as volatile, as it is not the end of the world if a client does not receive the update.
+                item.volatile.emit('onRefreshedOrgs', data);
+                callback();
+            },
+            function(err) {
+                console.log('[onRefreshedOrgsCallback] - updated all clients');
+            }
+        );
+    } else {
+        console.log('[onRefreshedOrgsCallback] Error: ' + err);
+    }
+}
+
+// Called whenever an event is processed for a given org.
+function onOrgEventCallback(err, data) {
+
+}

@@ -5,7 +5,7 @@
 exports.config = {
     orgEventsQueueName: "orgeventsqueue",
     numMessagesToPullFromQueue: 2,
-    pollQueuePollInterval: 1000,
+    pollQueuePollInterval: 5000,
 
     orgCache_TableName: 'orgCache',
     orgCache_PartitionKey: 'orgPartition',

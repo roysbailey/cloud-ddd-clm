@@ -1,1 +1,23 @@
-{"name":"CLMUI","version":"0.0.1","description":"Contract Management Lifecycle UI Sample","main":"server.js","author":{"name":"Roy","email":"roysbailey@silvertouch.co.uk"},"dependencies":{"express":"x","jade":"x"},"engines":{"node":"0.6.20","iisnode":"0.1.21"}}
+{
+    "name":"CLMUI",
+    "version":"0.0.1",
+    "description":"Contract Management Lifecycle UI Sample",
+    "main":"server.js",
+    "author":
+    {
+        "name":"Roy",
+        "email":"roysbailey@silvertouch.co.uk"
+    },
+    "dependencies":
+    {
+        "express":"x",
+        "jade":"x",
+        "socket.io":"x",
+        "async":"x"
+    },
+    "engines":
+    {
+        "node":"0.6.20",
+        "iisnode":"0.1.21"
+    }
+}
