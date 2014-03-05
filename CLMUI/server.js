@@ -39,6 +39,7 @@ server.listen(port);
 
 io.sockets.on('connection', function (socket) {
     socket.on('selected provider', function (data) {
+        console.log('Client selected new provider with UKPRN: ' + data);
         socket.set('provider', data);
     });
 });
@@ -64,6 +65,29 @@ function onRefreshedOrgsCallback(err, data) {
 }
 
 // Called whenever an event is processed for a given org.
-function onOrgEventCallback(err, data) {
-
+function onOrgEventCallback(err, wrappedEvent) {
+    if (!err) {
+        // Get our list of all connections, and sent a socket message to any who are listening for our provider:
+        var connectedClients = io.sockets.clients();
+        async.filter(connectedClients,
+            function(socket, callback) {
+                socket.get('provider', function(err, ukprn) {
+                    if (!err)
+                        callback(wrappedEvent.event.content.ukprn === ukprn);
+                    else
+                        callback(false);
+                });
+            },
+            function(results) {
+                // Now we have a list of all clients interested in our provider,
+                // lets send them an updated message!
+                async.each(results, function(socket, callback){
+                    socket.emit('onOrgEvent', wrappedEvent);
+                    callback(null);
+                });
+            }
+        );
+    } else {
+        console.log('[onOrgEventCallback] Error: ' + err);
+    }
 }

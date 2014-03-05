@@ -8,6 +8,7 @@ var orgEventToCacheMapper = require('../services/orgEventContentToOrgCache');
 var config = require('../config').config;
 var Logger = require('../services/logger').Logger;
 var logger = new Logger('pollForChanges');
+var DateTime = require('../services/DateTime').DateTime;
 
 exports.pollForChanges = function(onRefreshedOrgsCallback, onOrgEventCallback) {
 
@@ -50,6 +51,11 @@ exports.pollForChanges = function(onRefreshedOrgsCallback, onOrgEventCallback) {
             logger.logErr("Failed to process event: " + event.id + " - Error: " + err);
         }
 
+        // An event has been processed, so lets call our "outer callback" so they can react accordingly.
+        // TODO this feels like it should be an EventEmitter implementation to me!  Consider re-factor
+        if (event)
+            onOrgEventCallback(err, event);
+
         var event = getNextEvent();
         if (event) {
             processEvent(event, onProcessNextEvent);
@@ -69,7 +75,7 @@ exports.pollForChanges = function(onRefreshedOrgsCallback, onOrgEventCallback) {
                 if (!err) {
                     logger.log("ProcessEvent", "Update applied for: " + event.id);
                     eventQueueRepo.dequeueEventFromQueue(wrappedEvent, function(err){
-                        callback(err, wrappedEvent);
+                        callback(null, wrappedEvent);
                     });
                 } else {
                     logger.logErr("Failed to [update] Event:" + event.id + " - Error: " + err);
@@ -98,7 +104,8 @@ exports.pollForChanges = function(onRefreshedOrgsCallback, onOrgEventCallback) {
     function processedAllEvents() {
 
         // Poll has completed, so lets call our "callback" so an event can be raised back to the clients.
-        onRefreshedOrgsCallback(null, new Date());
+        var dt = new DateTime();
+        onRefreshedOrgsCallback(null, dt.formats['compound']['mySQL']);
 
         logger.log("processedAllEvents", "Sleeping for following interval: " + config.pollQueuePollInterval);
         setTimeout(

@@ -12,6 +12,12 @@ block content
             p.lead
                 | Please update details of your contract below.
 
+        p.lead
+            | Provider details last refreshed:
+            span#lastRefresh
+        p.lead
+            | Provider event:
+            span#orgEvent
         form(role="form", action="/contract/#{contract.ukprn}", method="post")
             .form-group
                 input#ukprn(name="ukprn", value="#{contract.ukprn}", type="hidden")
@@ -42,3 +48,12 @@ block content
                 .well
                     button.btn.btn-success(type="submit") Save
                     a.btn.btn-danger(href="/contract/#{contract.ukprn}", role="button") Cancel
+        script.
+            var socket = io.connect('http://localhost:8081');
+            socket.emit('selected provider', '#{contract.ukprn}');
+            socket.on('onRefreshedOrgs', function (data) {
+                $('#lastRefresh').html(data);
+                });
+            socket.on('onOrgEvent', function (data) {
+                $('#orgEvent').html(data);
+                });
