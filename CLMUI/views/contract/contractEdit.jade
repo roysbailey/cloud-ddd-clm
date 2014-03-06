@@ -15,9 +15,10 @@ block content
         p.lead
             | Provider details last refreshed:
             span#lastRefresh
-        p.lead
-            | Provider event:
-            span#orgEvent
+        #orgEventAlert.alert.alert-success
+            p
+                | Provider event:
+                span#orgEvent
         form(role="form", action="/contract/#{contract.ukprn}", method="post")
             .form-group
                 input#ukprn(name="ukprn", value="#{contract.ukprn}", type="hidden")
@@ -47,13 +48,21 @@ block content
             .form-group
                 .well
                     button.btn.btn-success(type="submit") Save
+                    span
                     a.btn.btn-danger(href="/contract/#{contract.ukprn}", role="button") Cancel
         script.
+            $(function() {
+                $('#orgEventAlert').css( "visibility", "hidden" );
+            });
+
             var socket = io.connect('http://localhost:8081');
-            socket.emit('selected provider', '#{contract.ukprn}');
+            socket.emit('selected provider', #{contract.ukprn});
             socket.on('onRefreshedOrgs', function (data) {
                 $('#lastRefresh').html(data);
                 });
             socket.on('onOrgEvent', function (data) {
-                $('#orgEvent').html(data);
+                // alert('We have an update to your Org: ' + data.event.content.name);
+                $('#orgEvent').html(data.event.id + ' - type - ' + data.eventType + ' - org name: ' + data.event.content.name);
+                //$('#orgEventAlert').slideDown( "slow" );
+                $('#orgEventAlert').css( "visibility", "display" );
                 });

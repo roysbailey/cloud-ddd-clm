@@ -46,18 +46,23 @@ exports.pollForChanges = function(onRefreshedOrgsCallback, onOrgEventCallback) {
         onProcessNextEvent(null);
     }
 
-    function onProcessNextEvent(err, event) {
+    // Called to process next event.  The last event processed is passed as a param.
+    function onProcessNextEvent(err, lastProcessedEvent) {
         if (err) {
-            logger.logErr("Failed to process event: " + event.id + " - Error: " + err);
+            logger.logErr("onProcessNextEvent - Error on entry: " + err);
         }
 
-        // An event has been processed, so lets call our "outer callback" so they can react accordingly.
+        // The previous event has been now processed, so lets call our "outer callback" so the UI consumer can update.
         // TODO this feels like it should be an EventEmitter implementation to me!  Consider re-factor
-        if (event)
-            onOrgEventCallback(err, event);
+        if (lastProcessedEvent) {
+            logger.log('onProcessNextEvent', 'Event processed: just about to call UI callback: ' + lastProcessedEvent.event.id, true);
+            onOrgEventCallback(err, lastProcessedEvent);
+        }
 
+        // Read the next event processed
         var event = getNextEvent();
         if (event) {
+            logger.log('onProcessNextEvent', 'new event to process: '  + event.id, true);
             processEvent(event, onProcessNextEvent);
         } else {
             processedAllEvents();
