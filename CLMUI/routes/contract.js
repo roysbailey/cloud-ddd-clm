@@ -28,7 +28,7 @@ exports.contractCreate = function(req, res) {
     var ukprnNum = parseInt(req.params.ukprn);
     var emptyContract = new contractRepo.Contract(ukprnNum);
     emptyContract.ukprn = ukprnNum;
-    var vm = { mode: "create", isCreate: true, createdTakeTwo: 0 === 0, contract: emptyContract};
+    var vm = { mode: "create", isCreate: true, createdTakeTwo: 0 === 0, contract: emptyContract, socketServer: process.env.socketServer || 'http://localhost:8081' };
     res.render('contract/contractEdit', vm);
 }
 
@@ -55,7 +55,7 @@ exports.contractEdit = function(req, res) {
     var contract = contractRepo.getContract(req.params.ukprn, req.params.contractNo, function(err, contract){
         if (contract){
             logger.log('contractEdit:' + req.params.contractNo, 'Contract loaded');
-            var vm = { mode: "update", isCreate: false, createdTakeTwo: 1 === 0, contract: contract};
+            var vm = { mode: "update", isCreate: false, createdTakeTwo: 1 === 0, contract: contract, socketServer: process.env.socketServer || 'http://localhost:8081'};
             res.render('contract/contractEdit', vm);
         } else {
             logger.logErr(err);

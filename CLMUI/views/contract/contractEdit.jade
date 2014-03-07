@@ -56,7 +56,7 @@ block content
                 $('#orgEventAlert').slideUp();
             });
 
-            var socket = io.connect('http://localhost:8081');
+            var socket = io.connect('#{socketServer}');
             socket.emit('selected provider', #{contract.ukprn});
             socket.on('onRefreshedOrgs', function (data) {
                 $('#lastRefresh').html(data);
