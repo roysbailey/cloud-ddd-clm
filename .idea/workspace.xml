@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e509d0cd-d738-4e15-8c19-9c72793beb72" name="Default" comment="Merge branch 'master' of https://github.com/roysbailey/cloud-ddd-clm&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;CLMUI/routes/contract.js&#10;&#9;CLMUI/services/contractRepo.js&#10;&#9;CLMUI/views/contract/contractEdit.jade&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CLMUI/eventPublication/webEventPublisher.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLMUI/views/contract/contractEdit.jade" afterPath="$PROJECT_DIR$/CLMUI/views/contract/contractEdit.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLMUI/services/logger.js" afterPath="$PROJECT_DIR$/CLMUI/services/logger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLMUI/server.js" afterPath="$PROJECT_DIR$/CLMUI/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cloud-ddd-cml.iws" />
@@ -27,15 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="23" selection-start="0" selection-end="3963" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1972">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="pollForChanges.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLMUI/processors/pollForChanges.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -75,8 +67,19 @@
       <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CLMUI/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="24" selection-start="3455" selection-end="3455" vertical-scroll-proportion="0.0" vertical-offset="1129" max-vertical-offset="1666">
+            <state line="4" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webEventPublisher.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CLMUI/eventPublication/webEventPublisher.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="35" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+              <folding>
+                <element signature="e#0#42#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,7 +87,7 @@
       <file leaf-file-name="contractEdit.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CLMUI/views/contract/contractEdit.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="24" selection-start="2463" selection-end="2463" vertical-scroll-proportion="0.17073171" vertical-offset="780" max-vertical-offset="1258">
+            <state line="65" column="69" selection-start="3197" selection-end="3197" vertical-scroll-proportion="0.6973294" vertical-offset="870" max-vertical-offset="1258">
               <folding />
             </state>
           </provider>
@@ -160,9 +163,10 @@
         <option value="$PROJECT_DIR$/CLMUI/config.js" />
         <option value="$PROJECT_DIR$/CLMUI/package.json" />
         <option value="$PROJECT_DIR$/CLMUI/views/layout.jade" />
-        <option value="$PROJECT_DIR$/CLMUI/server.js" />
         <option value="$PROJECT_DIR$/CLMUI/services/logger.js" />
         <option value="$PROJECT_DIR$/CLMUI/processors/pollForChanges.js" />
+        <option value="$PROJECT_DIR$/CLMUI/server.js" />
+        <option value="$PROJECT_DIR$/CLMUI/eventPublication/webEventPublisher.js" />
         <option value="$PROJECT_DIR$/CLMUI/views/contract/contractEdit.jade" />
       </list>
     </option>
@@ -278,65 +282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cloud-ddd-cml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cloud-ddd-clm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CLMUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contract" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cloud-ddd-cml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cloud-ddd-clm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CLMUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cloud-ddd-cml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cloud-ddd-clm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CLMUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processors" />
+              <option name="myItemId" value="eventPublication" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -354,7 +300,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../dropbox/dev/PluralSight/Node/ExpressJS/3-expressjs-m3/after/module3" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistory" value="Update applied for&#10;Last processed event&#10;are new&#10;No new events since last poll&#10;./../services/eventQueueRepo&#10;jade&#10;liveedit&#10;track" />
+    <property name="SearchEverywhereHistory" value="server&#10;Update applied for&#10;Last processed event&#10;are new&#10;No new events since last poll&#10;./../services/eventQueueRepo&#10;jade&#10;liveedit&#10;track" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
   </component>
@@ -374,10 +320,18 @@
       <recent name="C:\data\git\cloud-ddd-clm\PollOrgChangesRole" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.CLMUI">
+  <component name="RunManager" selected="Node.js.PollOrgChangesRole">
     <configuration default="false" name="test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:63342/cloud-ddd-cml/CLMUI/public/test.html">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -390,23 +344,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -514,18 +460,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26179606" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17918216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26636225" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37747335" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325723" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21526718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21526718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -592,11 +538,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/node-rest-client/lib/node-rest-client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="58" selection-start="1553" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="7990" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PollOrgChangesRole/node_modules/azure/lib/services/queue/queueservice.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="538" column="71" selection-start="26682" selection-end="26699" vertical-scroll-proportion="0.0" vertical-offset="8831" max-vertical-offset="12580" />
@@ -769,16 +710,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/services/orgCacheRepo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1683">
-          <folding />
-        </state>
+        <state line="27" column="0" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1683" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/services/orgEventContentToOrgCache.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProcessOrgChangeRole/server.js">
@@ -859,14 +796,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="24" selection-start="3455" selection-end="3455" vertical-scroll-proportion="0.0" vertical-offset="1129" max-vertical-offset="1666">
+        <state line="4" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CLMUI/eventPublication/webEventPublisher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="35" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CLMUI/views/contract/contractEdit.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="24" selection-start="2463" selection-end="2463" vertical-scroll-proportion="0.17073171" vertical-offset="780" max-vertical-offset="1258">
+        <state line="65" column="69" selection-start="3197" selection-end="3197" vertical-scroll-proportion="0.6973294" vertical-offset="870" max-vertical-offset="1258">
           <folding />
         </state>
       </provider>

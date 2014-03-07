@@ -52,7 +52,8 @@ block content
                     a.btn.btn-danger(href="/contract/#{contract.ukprn}", role="button") Cancel
         script.
             $(function() {
-                $('#orgEventAlert').css( "visibility", "hidden" );
+                //$('#orgEventAlert').css( "visibility", "hidden" );
+                $('#orgEventAlert').slideUp();
             });
 
             var socket = io.connect('http://localhost:8081');
@@ -62,7 +63,6 @@ block content
                 });
             socket.on('onOrgEvent', function (data) {
                 // alert('We have an update to your Org: ' + data.event.content.name);
-                $('#orgEvent').html(data.event.id + ' - type - ' + data.eventType + ' - org name: ' + data.event.content.name);
-                //$('#orgEventAlert').slideDown( "slow" );
-                $('#orgEventAlert').css( "visibility", "display" );
+                $('#orgEvent').html(data.event.id + ' - type - [' + data.eventType + '] - org name: ' + data.event.content.name);
+                $('#orgEventAlert').slideDown("slow").delay(5000).slideUp("slow");
                 });
